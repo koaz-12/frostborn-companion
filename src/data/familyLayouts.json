@@ -1,0 +1,189 @@
+{
+  "blueprints": [
+    {
+      "id": "honeycomb-vault",
+      "name": "Panal Defensivo de 4 Cuadrantes (Honeycomb Vault)",
+      "tag": "Recomendado Anti-Raid",
+      "difficulty": "Avanzado",
+      "overview": "Diseño en panal con 4 parcelas individuales interconectadas por un corredor anular blindado de doble pared. Minimiza el impacto de las bombas de polvora y fuerza a los atacantes a gastar decenas de hachas de hierro.",
+      "keyFeatures": [
+        "Cámara acorazada central (4x4) rodeada de puertas de hierro/acero en serie.",
+        "Cuadrantes individuales divididos con puertas reforzadas para aislar breaches.",
+        "Trampas de oso escondidas tras marcos de puertas en zonas ciegas.",
+        "Cofres señuelo (Dummy Chests) colocados en la capa exterior con recursos comunes para despistar."
+      ],
+      "estimatedMaterials": {
+        "pine_walls": 32,
+        "stone_walls": 48,
+        "iron_walls": 24,
+        "steel_walls": 8,
+        "bear_traps": 12,
+        "spikes": 16,
+        "doors": 14
+      },
+      "gridPreview": [
+        ["🧱", "🧱", "🧱", "🧱", "🧱", "🧱", "🧱"],
+        ["🧱", "🛏️", "🚪", "📦", "🚪", "🛏️", "🧱"],
+        ["🧱", "🚪", "🧱", "🛡️", "🧱", "🚪", "🧱"],
+        ["🧱", "📦", "🛡️", "👑", "🛡️", "📦", "🧱"],
+        ["🧱", "🚪", "🧱", "🛡️", "🧱", "🚪", "🧱"],
+        ["🧱", "🛏️", "🚪", "📦", "🚪", "🛏️", "🧱"],
+        ["🧱", "🧱", "🧱", "🧱", "🧱", "🧱", "🧱"]
+      ]
+    },
+    {
+      "id": "shared-bank-hub",
+      "name": "Hub de Banco Central Compartido",
+      "tag": "Ideal Cooperativo",
+      "difficulty": "Intermedio",
+      "overview": "Diseño centrado en la comodidad de crafteo e intercambio constante. Coloca todos los bancos de trabajo y el gran almacén protegido en el centro, con 4 alcobas perimetrales protegidas.",
+      "keyFeatures": [
+        "Acceso directo de los 4 miembros al centro de crafteo común.",
+        "Cámara central de nivel 3 (Hierro/Acero) con cofres ordenados por categorías.",
+        "Perímetro exterior de estacas de madera y trampas de gas.",
+        "Acceso rápido al Carro del Distrito y zona de carga."
+      ],
+      "estimatedMaterials": {
+        "pine_walls": 40,
+        "stone_walls": 36,
+        "iron_walls": 16,
+        "steel_walls": 4,
+        "bear_traps": 8,
+        "spikes": 24,
+        "doors": 10
+      },
+      "gridPreview": [
+        ["🧱", "🧱", "🧱", "🚪", "🧱", "🧱", "🧱"],
+        ["🧱", "🔨", "🧱", "📦", "🧱", "🔨", "🧱"],
+        ["🧱", "🧱", "🚪", "👑", "🚪", "🧱", "🧱"],
+        ["🚪", "📦", "👑", "🏛️", "👑", "📦", "🚪"],
+        ["🧱", "🧱", "🚪", "👑", "🚪", "🧱", "🧱"],
+        ["🧱", "🔨", "🧱", "📦", "🧱", "🔨", "🧱"],
+        ["🧱", "🧱", "🧱", "🚪", "🧱", "🧱", "🧱"]
+      ]
+    },
+    {
+      "id": "zigzag-door-maze",
+      "name": "Laberinto de Puertas en Zig-Zag",
+      "tag": "Anti-Ganzúas",
+      "difficulty": "Experto",
+      "overview": "Aprovecha la mecánica de apertura de puertas. Obliga a los asaltantes a atravesar hasta 16 puertas en zigzag antes de tocar un cofre valioso, desgastando todas sus ganzúas y bombas.",
+      "keyFeatures": [
+        "Pasillos sin cofres que obligan a gastar llaves/ganzúas en puertas falsas.",
+        "Salas de emboscada con trampas de oso emparejadas con paredes de piedra dura.",
+        "Habitación blindada en la esquina más lejana del punto de respawn.",
+        "Excelente para familias con horario de juego no coordinado."
+      ],
+      "estimatedMaterials": {
+        "pine_walls": 20,
+        "stone_walls": 52,
+        "iron_walls": 20,
+        "steel_walls": 6,
+        "bear_traps": 16,
+        "spikes": 12,
+        "doors": 20
+      },
+      "gridPreview": [
+        ["🧱", "🧱", "🧱", "🧱", "🧱", "🧱", "🧱"],
+        ["🧱", "📦", "🧱", "🚪", "🧱", "📦", "🧱"],
+        ["🧱", "🚪", "🧱", "🕳️", "🚪", "🚪", "🧱"],
+        ["🧱", "🧱", "🚪", "🧱", "🧱", "🧱", "🧱"],
+        ["🧱", "🕳️", "🚪", "🕳️", "🧱", "👑", "🧱"],
+        ["🧱", "📦", "🧱", "🧱", "🚪", "📦", "🧱"],
+        ["🧱", "🧱", "🧱", "🧱", "🧱", "🧱", "🧱"]
+      ]
+    }
+  ],
+  "wallTiers": [
+    {
+      "tier": 1,
+      "name": "Pared de Pino / Madera",
+      "durability": "150 HP",
+      "raidResistance": "Muy Baja (Rompe con hacha de pino/cobre)",
+      "materialsPerWall": "Madera de Pino x20, Cuerda x5",
+      "icon": "🪵"
+    },
+    {
+      "tier": 2,
+      "name": "Pared de Piedra Caliza",
+      "durability": "500 HP",
+      "raidResistance": "Media (Requiere hacha de hierro o ganzúa)",
+      "materialsPerWall": "Bloques de Piedra x20, Tablas x10, Clavos x10",
+      "icon": "🧱"
+    },
+    {
+      "tier": 3,
+      "name": "Pared de Hierro Reforzado",
+      "durability": "1,500 HP",
+      "raidResistance": "Alta (Requiere bomba de pólvora o hacha de acero)",
+      "materialsPerWall": "Placa de Hierro x10, Sujetadores x10, Bloques x30",
+      "icon": "⛓️"
+    },
+    {
+      "tier": 4,
+      "name": "Pared de Acero Blindado",
+      "durability": "4,000 HP",
+      "raidResistance": "Máxima (Casi impenetrable sin múltiples bombas)",
+      "materialsPerWall": "Placa de Acero x10, Engranajes x10, Barniz x5",
+      "icon": "🛡️"
+    }
+  ],
+  "chestCategories": [
+    {
+      "title": "Cofres de Banco Guardado (Caja Fuerte Central)",
+      "icon": "🔐",
+      "priority": "Alta Seguridad (Hierro / Acero)",
+      "recommendedItems": "Armas moradas legendarias, sets de armadura de acero, pociones mayores, recursos de crafteo épicos (lingotes de plata/oro, gemas, talismanes)."
+    },
+    {
+      "title": "Cofres de Farmeo y Construcción Rápida",
+      "icon": "🪵",
+      "priority": "Seguridad Media (Piedra)",
+      "recommendedItems": "Pino, piedra caliza, cueros, fibras, minerales crudos, herramientas de recolección (picos, hachas verdes)."
+    },
+    {
+      "title": "Cofres de Suministros PvP y Consumibles",
+      "icon": "🧪",
+      "priority": "Acceso Rápido cerca de la Puerta",
+      "recommendedItems": "Pociones curativas rápidas, comida cocinada, vendas, bastones de curación verdes, botas de velocidad."
+    },
+    {
+      "title": "Cofres Señuelo / Trampa (Exterior)",
+      "icon": "📦",
+      "priority": "Exterior / Capa de Pino",
+      "recommendedItems": "Items casi rotos (1-5% durabilidad), semillas, bayas rojas, basura de crafteo para engañar al asaltante."
+    }
+  ],
+  "buildingSteps": [
+    {
+      "step": 1,
+      "title": "1. Medición del Terreno y Demarcación de la Cámara Central",
+      "icon": "📐",
+      "description": "Comienza colocando los cimientos en la intersección central de los 4 cuadrantes de la familia. Diseña primero el núcleo del Banco Central (👑) de 2x2 celdas."
+    },
+    {
+      "step": 2,
+      "title": "2. Blindaje del Anillo Interno con Hierro / Acero (Tier 3-4)",
+      "icon": "🛡️",
+      "description": "Eleva las paredes del núcleo a Nivel 2 (Piedra) de inmediato y mejora a Nivel 3 (Hierro) las 4 paredes que encierran los cofres de valor. Esta zona debe resistir bombas de pólvora."
+    },
+    {
+      "step": 3,
+      "title": "3. Creación del Pasillo de Puertas en Zig-Zag y Panal (1x1)",
+      "icon": "🚪",
+      "description": "Añade la segunda capa concéntrica. Divide el corredor en celdas de 1x1. Coloca las puertas de forma escalonada (en esquinas opuestas) para que el enemigo deba rotar y gastar más hachas y ganzúas."
+    },
+    {
+      "step": 4,
+      "title": "4. Colocación Estratégica de Trampas de Oso y Estacas",
+      "icon": "🕳️",
+      "description": "Oculta trampas de oso en los puntos ciegos detrás de los marcos de las puertas. Cuando el atacante rompa una puerta y avance rápido, quedará inmovilizado permitiendo a la familia defenderse."
+    },
+    {
+      "step": 5,
+      "title": "5. Configuración de Habitaciones Perimetrales y Cofres Señuelo",
+      "icon": "📦",
+      "description": "Construye los 4 dormitorios individuales en las esquinas exteriores. En la capa exterior de pino, deja 2 cofres con objetos de baja durabilidad o basura de crafteo para engañar a los asaltantes."
+    }
+  ]
+}

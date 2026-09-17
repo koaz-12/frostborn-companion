@@ -1,0 +1,223 @@
+{
+  "gameVersion": "1.35.x",
+  "guides": [
+    {
+      "id": "sanctum-normal",
+      "title": "Sanctum de Odín: Modo Normal",
+      "category": "sanctum",
+      "badge": "Mazmorra Principal",
+      "overview": "La mazmorra insignia de Frostborn. Es la principal fuente de armas moradas, armaduras de placas y ofrendas para el Altar de Odín.",
+      "requirements": [
+        "Nivel de Distrito 10 o superior",
+        "Ofrenda a Odín (obtenida en Tumbas o zonas amarillas)",
+        "¡Atención! Al entrar al Sanctum se desactiva el escudo de protección de tu base"
+      ],
+      "preparationChecklist": [
+        "Al menos 1 cofre completo de armas verdes (Espadas, Escudos, Picos)",
+        "1 o 2 armas moradas o a dos manos reservadas para jefes",
+        "Staff de Soporte (bastón de curación) OBLIGATORIO en slot secundario",
+        "20-30 unidades de Carne de Pierna cocinada o pociones de salud",
+        "Armadura de bronce o placas para el tanque de la familia"
+      ],
+      "mechanics": [
+        "Técnica de la Puerta (Door Technique): Ataca a los enemigos pesados cerca del marco de la puerta de transición y crúzala inmediatamente para reiniciar su animación de ataque sin recibir daño de vuelta.",
+        "Kiting en Zigzag: Nunca corras en línea recta contra gigantes. Muévete en ángulos perpendiculares para evitar su golpe aplastante en línea recta.",
+        "Ataque Furtivo (Sneak Attack): Agáchate antes de abrir salas para conectar un golpe inicial crítico que ahorra durabilidad de tus armas."
+      ],
+      "bosses": [
+        {
+          "name": "Jefe Gigante (Giant Chief)",
+          "hp": "4,000 HP",
+          "threatLevel": "Extrema",
+          "recommendedGear": "Armas pesadas a dos manos, botas de velocidad, pociones de regeneración rápida",
+          "strategy": "Aplica la regla de '2-3 golpes y retrocede'. Cuando el Jefe levante ambos brazos para su golpe telúrico, sal de su radio inmediatamente. Lleva siempre pociones preparadas en la barra rápida."
+        },
+        {
+          "name": "Nigromante de las Sombras",
+          "hp": "2,800 HP",
+          "threatLevel": "Alta",
+          "recommendedGear": "Armas a distancia (Arco compuesto o Báculo de fuego)",
+          "strategy": "Aprovecha la geometría circular de la sala. Dispara mientras corres en círculos para evitar los proyectiles de magia oscura y limpia rápidamente a los esqueletos invocados."
+        }
+      ],
+      "tips": [
+        "Deja a un miembro de tu familia en la base o vigilen el chat de clan durante la raid.",
+        "Dona los drops de durabilidad dañada si no tienes cómo repararlos; pero los que saques al 100% donan el valor máximo de puntos."
+      ]
+    },
+    {
+      "id": "sanctum-hard",
+      "title": "Sanctum de Odín: Modo Difícil (Hard Mode)",
+      "category": "sanctum",
+      "badge": "Desafío End-Game",
+      "overview": "Versión de máxima dificultad del Sanctum. Incluye enemigos potenciados, la Maldición del Sanctum y la obtención de objetos malditos de alto valor.",
+      "requirements": [
+        "Nivel de Distrito 20 o superior",
+        "Completar previamente el Modo Normal",
+        "Linterna de Odín en el inventario"
+      ],
+      "preparationChecklist": [
+        "Equipamiento completo de armadura de acero o púrpura",
+        "Múltiples Hogueras Benditas para disipar la maldición",
+        "Equipo de 4 jugadores con roles definidos: 1 Tanque (Protector), 1 Healer/Druida y 2 DPS"
+      ],
+      "mechanics": [
+        "Maldición del Sanctum: Aplica un debuff progresivo acumulable que reduce la velocidad de movimiento, reduce la armadura y bloquea la regeneración natural.",
+        "Hogueras Benditas: Deben encenderse en puntos específicos para limpiar las acumulaciones de la maldición de todo el equipo.",
+        "Purificación con Nisse: Los ítems obtenidos aquí están malditos. Debes llevarlos con el NPC Nisse para purificarlos antes de que puedan usarse o equiparse.",
+        "Cofre de Nisse: Utiliza el cofre especial que ofrece Nisse en la entrada para no tener que regresar a tu campamento a cada momento."
+      ],
+      "tips": [
+        "Nunca te alejes solo de la fogata encendida con más de 3 cargas de maldición.",
+        "Los ítems purificados de Hard Mode otorgan una cantidad colosal de puntos al Altar de Odín."
+      ]
+    },
+    {
+      "id": "tombs-guide",
+      "title": "Guía Maestra de Tumbas (Tombs)",
+      "category": "tombs",
+      "badge": "Farming y Clanes",
+      "overview": "Las Tumbas aparecen en zonas Amarillas y Rojas. Hay 5 tipos con 4 variaciones cada una (20 tumbas únicas), además de la Tumba Olvidada y la Tumba de Cenizas.",
+      "requirements": [
+        "Acceso a zonas amarillas o rojas",
+        "Antorchas y ganzúas para abrir cofres sellados"
+      ],
+      "preparationChecklist": [
+        "Equipo 'desechable' o verde básico (asume que siempre puede haber PvP)",
+        "Carne de Pierna para curar entre combates",
+        "Una clase de curación (Curer/Druid) en el grupo ahorra cientos de recursos"
+      ],
+      "mechanics": [
+        "Tumba del Toro: La tumba con mayor cantidad promedio de cofres y botín del juego. Muy codiciada.",
+        "Tumba del Lagarto: El diseño más lineal y directo hasta el jefe. Rápida para speedruns.",
+        "Tumba del Dragón: Balance óptimo entre seguridad y recompensas intermedias.",
+        "Tumba del Gusano: La más segura para jugadores en solitario, aunque con menor densidad de cofres.",
+        "Tumba del Escorpión: Contiene salas con cofres libres de enemigos, pero la relación de vida de los monstruos vs recompensa es menos eficiente.",
+        "Tumba Olvidada: Evento especial temporal para jugadores de nivel 25 o menor (basta con que 1 miembro de la familia cumpla el requisito).",
+        "Tumba de Cenizas: Zona de alta dificultad con trampas de fuego y monstruos con daño elemental."
+      ],
+      "tips": [
+        "Mecánica de Trampas en Equipo: Un jugador avanza para desactivar la trampa y permitir pasar a los demás; luego la reactiva a sus espaldas para bloquear a invasores hostiles de clanes rivales.",
+        "En zonas amarillas y rojas, nunca bajes la guardia: asume que hay otro clan acechando detrás de cada puerta."
+      ]
+    },
+    {
+      "id": "ship-graveyard",
+      "title": "Cementerio de Barcos (Ship Graveyard)",
+      "category": "graveyard",
+      "badge": "Zona Marítima",
+      "overview": "Zona de alto peligro rodeada de niebla y naufragios. Es el lugar ideal para recolectar equipo morado y materiales para la Forja de Alfheim.",
+      "requirements": [
+        "Nivel de Distrito 14+",
+        "Protección contra el frío o alimentos calientes"
+      ],
+      "preparationChecklist": [
+        "Armas con alto DPS para eliminar a los tripulantes no-muertos",
+        "Espacio libre en el inventario para armas de calidad azul y morada",
+        "Ganzúas de hierro para los cofres de los capitanes piratas"
+      ],
+      "mechanics": [
+        "Los cofres en los restos de barcos tienen alta probabilidad de arrojar piezas moradas.",
+        "Si tienes desbloqueada la Forja, este es el mejor mapa para recolectar ítems morados dañados y fundirlos en orbes de poder."
+      ],
+      "tips": [
+        "Los cofres que están en el agua ralentizan al personaje: asegúrate de no tener enemigos cerca antes de abrirlos."
+      ]
+    },
+    {
+      "id": "den-of-monsters",
+      "title": "Guarida de Monstruos (Den of Monsters)",
+      "category": "den",
+      "badge": "Oleadas Co-op",
+      "overview": "Evento cooperativo de supervivencia donde la familia debe resistir oleadas continuas de monstruos y jefes menores.",
+      "requirements": [
+        "Distrito 15+",
+        "Equipo coordinado de al menos 3 a 4 jugadores"
+      ],
+      "preparationChecklist": [
+        "Mucho daño en área (Mago de Fuego o Berserker)",
+        "Control de masas (Druida con raíces o Thrasher con stuns)",
+        "Pociones de velocidad y elixires de regeneración"
+      ],
+      "mechanics": [
+        "A mayor nivel de la Guarida (Nivel 1, 2, 3), mayor número de oleadas y dificultad de los enemigos.",
+        "Las oleadas finales contienen gigantes acorazados que requieren concentración de fuego (focus) de todo el grupo."
+      ],
+      "tips": [
+        "Coloquen al tanque en el embudo central para frenar a la horda mientras los arqueros y magos atacan desde atrás."
+      ]
+    },
+    {
+      "id": "forge-alfheim",
+      "title": "Forja de Alfheim (Fundición de Orbes)",
+      "category": "forge",
+      "badge": "Endgame Crafting",
+      "overview": "Sistema end-game donde se reciclan piezas moradas y equipo avanzado para generar orbes que permiten invocar armas de máximo nivel.",
+      "requirements": [
+        "Distrito 25+",
+        "Acceso a la región élfica de Alfheim"
+      ],
+      "preparationChecklist": [
+        "Armas moradas con poca durabilidad que ya no sirvan para combate",
+        "Minerales élficos y carbón refinado"
+      ],
+      "mechanics": [
+        "Fundición: Los ítems de calidad épica (morada) rotos o desgastados no deben tirarse. Fundirlos genera fragmentos de orbes.",
+        "Con 10 orbes completos puedes forjar cofres con armas legendarias garantizadas."
+      ],
+      "tips": [
+        "Regla de oro: Si un ítem morado tiene 100% de durabilidad y necesitas puntos de clase, dónalo al Altar de Odín. Si está roto o casi destruido, fúndelo en la Forja."
+      ]
+    },
+    {
+      "id": "pvp-and-raids",
+      "title": "Tácticas de PvP, Contraclases e Incursiones (Raids)",
+      "category": "pvp",
+      "badge": "Combate Competitivo",
+      "overview": "Todo lo que necesitas saber para ganar combates contra otros clanes y proteger tu base durante las incursiones de asedio.",
+      "requirements": [
+        "Cualquier nivel de personaje en zonas PvP"
+      ],
+      "preparationChecklist": [
+        "Composición de Familia equilibrada: 1 Tanque/Disruptor + 1 Healer + 1 Dispel (Sorcerer) + 1 DPS Rango o Burst",
+        "Pociones de velocidad de movimiento (los combates los gana quien controla la distancia)",
+        "Equipo de repuesto en los cofres protegidos del Banco"
+      ],
+      "mechanics": [
+        "Meta Actual PvP: Sorcerer, Druid y Nosferatu dominan el metajuego debido al dispel de mejoras enemigas, la inmovilización y el robo de vida con inmunidad.",
+        "Regla de Contraclases: Nosferatu anula a Wind Mage y Pathfinder; Sorcerer anula a Druid y Fire Mage; Berserker aplasta a Rangers si logra cerrar la distancia.",
+        "Defensa de Base: Diseña tu base en forma de 'laberinto de panal' (Honeycomb). Nunca coloques todos los cofres valiosos en una sola habitación central."
+      ],
+      "tips": [
+        "Antes de salir a farmear en zona roja, guarda tus mejores armas legendarias en el Banco. Lleva sólo equipo que puedas permitirte perder sin retrasar tu progreso."
+      ]
+    },
+    {
+      "id": "influence-points-guide",
+      "title": "Puntos de Influencia y Distrito (Nuevo Heim)",
+      "category": "district",
+      "badge": "Reputación de Nuevo Heim",
+      "overview": "Los Puntos de Influencia (🎖️) son una divisa especial de reputación cívica en Nuevo Heim, necesaria de forma obligatoria para avanzar el nivel del Distrito a partir del nivel 22 (y en niveles intermedios clave hasta el 184).",
+      "requirements": [
+        "Desbloquear Distrito Nivel 4 (Apertura de la Taberna de Nuevo Heim)",
+        "Nivel de Distrito 22 en adelante para empezar a consumirlos"
+      ],
+      "preparationChecklist": [
+        "Acumular comida cocinada, pociones y materiales procesados básicos en tu base para entregas de la Taberna",
+        "Tener hachas y picos listos en tu base para los Torneos diarios de 24 horas",
+        "Revisar la rotación de encargos al reiniciar el servidor cada 24 horas"
+      ],
+      "mechanics": [
+        "1. Misiones Diarias de la Taberna (Desbloqueada en Distrito Nvl 4): En el interior de la taberna de Nuevo Heim, habla con los PNJ y el Tabernero. Ofrecen encargos diarios que varían entre entregar alimentos, donar pociones curativas o cazar criaturas en zonas amarillas/rojas. Cada misión entrega Puntos de Influencia y Monedas de Plata.",
+        "2. Torneos Diarios Competitivos (24 Horas): Participa activamente talando madera, picando minerales o eliminando monstruos en las zonas designadas por el torneo activo. Conseguir hitos de puntos y quedar en percentiles altos (Top 5%, Top 15%) te premia con Cofres de Torneo repletos de Puntos de Influencia.",
+        "3. Pases de Temporada y Actividades de Temporada: Completar las tareas de las temporadas de Frostborn otorga de manera consistente cofres de suministros de la capital con paquetes de Puntos de Influencia.",
+        "4. Cofres de Reputación y Expediciones: Ciertas salas y cofres secretos en mazmorras o eventos de clan recompensan con sellos e influencia de Nuevo Heim."
+      ],
+      "tips": [
+        "El truco de la Taberna: No entregues armas valiosas o de alta durabilidad en los encargos de taberna. Haz sólo las misiones que pidan recursos renovables como comida, madera o pieles.",
+        "Sincroniza el Farmeo con los Torneos: Espera al torneo de recolección de madera o piedra para hacer tus sesiones masivas de farmeo. Así consigues los materiales de construcción del Distrito y los puntos de influencia al mismo tiempo.",
+        "A partir del nivel 22, los niveles alternan requisitos: un nivel te pedirá materiales + influencia, y el siguiente materiales + monedas de plata. Mantén un balance de ambos."
+      ]
+    }
+  ]
+}

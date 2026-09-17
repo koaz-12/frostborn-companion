@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0e17;
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-runic {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom Nordic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2d47;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4a853;
+}
+
+/* Runic Glow Effect */
+.glow-gold {
+  box-shadow: 0 0 15px rgba(212, 168, 83, 0.25);
+}
+
+.glow-ice {
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.25);
+}
+
+/* Gradient borders */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #a37c2c, #f3cb75, #a37c2c) 1;
+}

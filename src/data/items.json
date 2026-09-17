@@ -1,0 +1,209 @@
+{
+  "gameVersion": "1.35.x",
+  "lastUpdated": "2026-09-08",
+  "items": [
+    {
+      "id": "strong_pickaxe",
+      "name": "Pico Fuerte",
+      "nameEn": "Strong Pickaxe",
+      "type": "tool",
+      "rarity": "uncommon",
+      "masteryPoints": 18,
+      "maxDurability": 100,
+      "craftRecipe": {
+        "planks": 6,
+        "copper_ingot": 3,
+        "leather_strips": 2
+      },
+      "efficiencyRating": "top",
+      "notes": "👑 RECOMENDADO TOP: Mejor ratio de puntos por recurso invertido en todo el juego. Fácil de fabricar en masa.",
+      "icon": "⛏️"
+    },
+    {
+      "id": "green_sword",
+      "name": "Espada de Cobre Verde",
+      "nameEn": "Green Copper Sword",
+      "type": "weapon",
+      "rarity": "uncommon",
+      "masteryPoints": 24,
+      "maxDurability": 120,
+      "craftRecipe": {
+        "copper_ingot": 5,
+        "leather_strips": 3,
+        "planks": 2
+      },
+      "efficiencyRating": "high",
+      "notes": "Excelente opción para quemar excedente de cobre y tiras de cuero rápidamente.",
+      "icon": "🗡️"
+    },
+    {
+      "id": "green_shield",
+      "name": "Escudo de Madera Reforzado",
+      "nameEn": "Reinforced Green Shield",
+      "type": "armor",
+      "rarity": "uncommon",
+      "masteryPoints": 22,
+      "maxDurability": 140,
+      "craftRecipe": {
+        "planks": 8,
+        "copper_ingot": 2,
+        "nails": 2
+      },
+      "efficiencyRating": "high",
+      "notes": "Gran valor si tienes excedente de tablas y pocos lingotes.",
+      "icon": "🛡️"
+    },
+    {
+      "id": "defender_staff",
+      "name": "Bastón de Defensor",
+      "nameEn": "Defender Staff",
+      "type": "magic",
+      "rarity": "uncommon",
+      "masteryPoints": 26,
+      "maxDurability": 110,
+      "craftRecipe": {
+        "planks": 7,
+        "copper_ingot": 4,
+        "resin": 1
+      },
+      "efficiencyRating": "high",
+      "notes": "Muy buscado para donaciones de clases mágicas y de curación.",
+      "icon": "🪄"
+    },
+    {
+      "id": "ritual_dagger",
+      "name": "Daga Ritual",
+      "nameEn": "Ritual Dagger",
+      "type": "weapon",
+      "rarity": "uncommon",
+      "masteryPoints": 20,
+      "maxDurability": 90,
+      "craftRecipe": {
+        "copper_ingot": 3,
+        "leather_strips": 2
+      },
+      "efficiencyRating": "high",
+      "notes": "Rápida de fabricar, requiere pocos materiales de metal.",
+      "icon": "🔪"
+    },
+    {
+      "id": "bronze_sword",
+      "name": "Espada de Bronce Pesada",
+      "nameEn": "Heavy Bronze Sword",
+      "type": "weapon",
+      "rarity": "rare",
+      "masteryPoints": 60,
+      "maxDurability": 180,
+      "craftRecipe": {
+        "bronze_ingot": 6,
+        "strong_wood": 3,
+        "leather_strips": 4
+      },
+      "efficiencyRating": "medium",
+      "notes": "Buenos puntos pero el bronce es más costoso. Dona cuando sobre bronce.",
+      "icon": "⚔️"
+    },
+    {
+      "id": "hunting_bow",
+      "name": "Arco de Caza Reforzado",
+      "nameEn": "Hunting Bow",
+      "type": "weapon",
+      "rarity": "uncommon",
+      "masteryPoints": 22,
+      "maxDurability": 110,
+      "craftRecipe": {
+        "planks": 6,
+        "rope": 4,
+        "leather_strips": 2
+      },
+      "efficiencyRating": "high",
+      "notes": "Ideal para donar usando cuerdas y cuero sin consumir metales escasos.",
+      "icon": "🏹"
+    },
+    {
+      "id": "iron_spear",
+      "name": "Lanza de Hierro Nórdica",
+      "nameEn": "Iron Spear",
+      "type": "weapon",
+      "rarity": "rare",
+      "masteryPoints": 75,
+      "maxDurability": 200,
+      "craftRecipe": {
+        "iron_ingot": 5,
+        "strong_wood": 4,
+        "metal_parts": 2
+      },
+      "efficiencyRating": "medium",
+      "notes": "Rendimiento decente, mejor reservar para combate a menos que te sobren lingotes de hierro.",
+      "icon": "🔱"
+    },
+    {
+      "id": "sanctum_axe_purple",
+      "name": "Hacha de Batalla de Odín",
+      "nameEn": "Odin Battleaxe (Drop)",
+      "type": "weapon",
+      "rarity": "epic",
+      "masteryPoints": 250,
+      "maxDurability": 300,
+      "efficiencyRating": "top",
+      "notes": "Drop de cofres del Sanctum de Odín. Gran aporte de puntos directos sin coste de crafteo.",
+      "icon": "🪓"
+    },
+    {
+      "id": "ship_graveyard_chestplate",
+      "name": "Coraza del Capitán Fantasma",
+      "nameEn": "Ghost Captain Chestplate",
+      "type": "armor",
+      "rarity": "epic",
+      "masteryPoints": 280,
+      "maxDurability": 350,
+      "efficiencyRating": "top",
+      "notes": "Drop del Cementerio de Barcos. Dona si ya tienes armadura de repuesto.",
+      "icon": "🦺"
+    },
+    {
+      "id": "fire_staff_legendary",
+      "name": "Báculo de Llamas Eternas",
+      "nameEn": "Staff of Eternal Flames",
+      "type": "magic",
+      "rarity": "legendary",
+      "masteryPoints": 800,
+      "maxDurability": 450,
+      "efficiencyRating": "high",
+      "notes": "Arma legendaria. ¡Cuidado! Solo donar si es un duplicado o no usas la clase Mago de Fuego.",
+      "icon": "🔥"
+    },
+    {
+      "id": "basic_cloth_hat",
+      "name": "Gorro de Tela Básico",
+      "nameEn": "Basic Cloth Hat",
+      "type": "armor",
+      "rarity": "common",
+      "masteryPoints": 3,
+      "maxDurability": 60,
+      "craftRecipe": {
+        "linen_cloth": 3,
+        "leather_strips": 2
+      },
+      "efficiencyRating": "low",
+      "notes": "⚠️ NO RECOMENDADO: Otorga una cantidad insignificante de puntos comparado con el lino gastado.",
+      "icon": "🧢"
+    },
+    {
+      "id": "stone_spear",
+      "name": "Lanza de Piedra Rústica",
+      "nameEn": "Stone Spear",
+      "type": "weapon",
+      "rarity": "common",
+      "masteryPoints": 4,
+      "maxDurability": 70,
+      "craftRecipe": {
+        "pine_log": 4,
+        "limestone": 3
+      },
+      "efficiencyRating": "low",
+      "notes": "⚠️ Muy bajo retorno de puntos. Solo útil como relleno si tienes inventario saturado de piedras.",
+      "icon": "🦯"
+    }
+  ]
+}

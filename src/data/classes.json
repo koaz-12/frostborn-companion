@@ -1,0 +1,258 @@
+{
+  "gameVersion": "1.35.x",
+  "classes": [
+    {
+      "id": "warrior",
+      "name": "Guerrero (Warrior)",
+      "description": "Especialista en combate cuerpo a cuerpo, absorción de daño y control de multitudes en primera línea.",
+      "levels": [
+        { "level": 1, "requiredPoints": 0, "perks": ["Golpe pesado", "Incremento de salud base +5%"] },
+        { "level": 2, "requiredPoints": 450, "perks": ["Grito de batalla", "Resistencia física +10%"] },
+        { "level": 3, "requiredPoints": 1500, "perks": ["Carga demoledora", "Desbloqueo de subclases de combate"] },
+        { "level": 4, "requiredPoints": 4200, "perks": ["Inmunidad a derribos temporales", "Daño crítico cuerpo a cuerpo +20%"] },
+        { "level": 5, "requiredPoints": 9500, "perks": ["Furia nórdica permanente", "Velocidad de ataque incrementada"] }
+      ],
+      "subclasses": [
+        {
+          "id": "berserk",
+          "name": "Berserker",
+          "role": "DPS Melee Físico / Bruiser",
+          "description": "Infringe daño devastador a corta distancia a medida que baja su propia vida.",
+          "bestWeapons": ["Hacha a dos manos de Odín", "Espada pesada de hierro", "Martillo de guerra"],
+          "bestArmor": ["Set de placas de hierro", "Armadura nórdica reforzada"],
+          "recommendedRunes": ["Runa de Sed de Sangre", "Runa de Furia Ígnea"],
+          "familyRole": "Iniciador ofensivo principal, revienta tanques y desordena al rival.",
+          "pvpRating": 4,
+          "pveRating": 5,
+          "soloRating": 4,
+          "familyRating": 5,
+          "counters": ["Sharpshooter", "Fire Mage", "Hunter"],
+          "counteredBy": ["Sorcerer (dispel)", "Ice Mage (kiting)", "Nosferatu"],
+          "tips": [
+            "Combina tu salto berserker con pociones de velocidad para no ser kiteado.",
+            "En el Sanctum de Odín es uno de los mejores DPS contra gigantes."
+          ]
+        },
+        {
+          "id": "protector",
+          "name": "Protector",
+          "role": "Tanque Puro / Control",
+          "description": "Máxima armadura y escudos de absorción para proteger a los miembros débiles de la familia.",
+          "bestWeapons": ["Espada con escudo de bronce/acero", "Maza de aturdimiento"],
+          "bestArmor": ["Armadura pesada de placas completas"],
+          "recommendedRunes": ["Runa de Fortaleza de Odín", "Runa de Muro de Escudos"],
+          "familyRole": "Absorbe el daño de los jefes en mazmorras y bloquea puertas en defensas de base.",
+          "pvpRating": 3,
+          "pveRating": 5,
+          "soloRating": 3,
+          "familyRating": 5,
+          "counters": ["Thrasher", "Assassins"],
+          "counteredBy": ["Fire Mage (daño mágico ignora armadura)", "Sorcerer"],
+          "tips": [
+            "Activa el escudo reflectante justo cuando el jefe o jugador enemigo lance su ataque pesado.",
+            "Ideal para la técnica de la puerta en el Sanctum de Odín."
+          ]
+        },
+        {
+          "id": "thrasher",
+          "name": "Thrasher (Destructor)",
+          "role": "Iniciador Disruptor / Aturdimiento",
+          "description": "Especialista en romper formaciones enemigas con garrotes, ganchos y aturdimientos continuos.",
+          "bestWeapons": ["Garrote pesado con púas", "Hacha de combate doble"],
+          "bestArmor": ["Set de malla y cuero tachonado"],
+          "recommendedRunes": ["Runa de Aturdimiento Prolongado", "Runa de Rompearmaduras"],
+          "familyRole": "Inmoviliza al sanador enemigo en combates PvP.",
+          "pvpRating": 5,
+          "pveRating": 3,
+          "soloRating": 3,
+          "familyRating": 4,
+          "counters": ["Curer", "Healer", "Ice Mage"],
+          "counteredBy": ["Protector", "Druid"],
+          "tips": [
+            "Coordina tu stun con las habilidades de área de tus magos aliados para kills instantáneos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bowman",
+      "name": "Arquero (Bowman)",
+      "description": "Ataque a distancia de alta precisión, trampas y movilidad superior en campo abierto.",
+      "levels": [
+        { "level": 1, "requiredPoints": 0, "perks": ["Disparo perforante", "Velocidad de movimiento +3%"] },
+        { "level": 2, "requiredPoints": 450, "perks": ["Flechas ralentizadoras", "Rango de visión ampliado"] },
+        { "level": 3, "requiredPoints": 1500, "perks": ["Evasión ágil", "Desbloqueo de subclases de explorador"] },
+        { "level": 4, "requiredPoints": 4200, "perks": ["Flecha venenosa sombría", "Probabilidad de crítico a distancia +18%"] },
+        { "level": 5, "requiredPoints": 9500, "perks": ["Disparo múltiple", "Trampas indetectables"] }
+      ],
+      "subclasses": [
+        {
+          "id": "pathfinder",
+          "name": "Pathfinder (Explorador)",
+          "role": "Kiter de Larga Distancia / Movilidad",
+          "description": "El rey del kiting en zonas abiertas; nadie corre más rápido ni mantiene mejor la distancia.",
+          "bestWeapons": ["Arco compuesto de tejo", "Arco de cazador élfico"],
+          "bestArmor": ["Armadura ligera de cuero de ciervo"],
+          "recommendedRunes": ["Runa de Pies Ligeros", "Runa de Flecha Congelante"],
+          "familyRole": "Explora zonas rojas de farmeo y mantiene a raya enemigos cuerpo a cuerpo.",
+          "pvpRating": 4,
+          "pveRating": 4,
+          "soloRating": 5,
+          "familyRating": 4,
+          "counters": ["Protector", "Berserk (en campo abierto)"],
+          "counteredBy": ["Sharpshooter (mayor rango)", "Wind Mage", "Nosferatu"],
+          "tips": [
+            "Aprovecha las esquinas y árboles en zonas rojas para romper línea de visión mientras disparas."
+          ]
+        },
+        {
+          "id": "sharpshooter",
+          "name": "Sharpshooter (Francotirador)",
+          "role": "DPS Rango Explosivo / Burst",
+          "description": "Máximo daño crítico a la distancia más lejana del juego.",
+          "bestWeapons": ["Ballesta pesada de acero", "Arco largo de guerra"],
+          "bestArmor": ["Set de francotirador con botas ligeras"],
+          "recommendedRunes": ["Runa de Tiro a la Cabeza", "Runa de Perforación de Placas"],
+          "familyRole": "Elimina objetivos blandos antes de que puedan entrar en rango de combate.",
+          "pvpRating": 4,
+          "pveRating": 4,
+          "soloRating": 3,
+          "familyRating": 5,
+          "counters": ["Mages sin escudo", "Pathfinder"],
+          "counteredBy": ["Berserk (si acorta distancia)", "Nosferatu"],
+          "tips": [
+            "Coloca trampas detrás de ti antes de iniciar un enfrentamiento."
+          ]
+        },
+        {
+          "id": "hunter",
+          "name": "Hunter (Cazador)",
+          "role": "Trampero / Asistente con Mascota",
+          "description": "Utiliza trampas inmovilizadoras y sabuesos para desgastar a sus víctimas.",
+          "bestWeapons": ["Arco corto de fuego rápido", "Dagas arrojadizas"],
+          "bestArmor": ["Set de piel de lobo"],
+          "recommendedRunes": ["Runa de Garra de Fiera", "Runa de Cuerda Asfixiante"],
+          "familyRole": "Control de área en puntos estrechos como puertas y pasillos de mazmorras.",
+          "pvpRating": 4,
+          "pveRating": 4,
+          "soloRating": 4,
+          "familyRating": 4,
+          "counters": ["Melee fighters desprevenidos"],
+          "counteredBy": ["Sorcerer (limpia trampas con dispel)"],
+          "tips": [
+            "Las trampas colocadas en entradas de tumbas garantizan ventaja táctica total."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curer",
+      "name": "Sanador (Curer)",
+      "description": "Soporte vital, regeneración constante, purificación de debuffs y magia curativa sagrada.",
+      "levels": [
+        { "level": 1, "requiredPoints": 0, "perks": ["Curación menor", "Aura de regeneración para el equipo"] },
+        { "level": 2, "requiredPoints": 450, "perks": ["Purificación de venenos", "Resistencia mágica +10%"] },
+        { "level": 3, "requiredPoints": 1500, "perks": ["Círculo de sanación bendito", "Desbloqueo de ramas de soporte y hechicería"] },
+        { "level": 4, "requiredPoints": 4200, "perks": ["Revivir aliado con 40% de vida", "Sanación incrementada +25%"] },
+        { "level": 5, "requiredPoints": 9500, "perks": ["Inmunidad temporal para toda la familia", "Escudo divino"] }
+      ],
+      "subclasses": [
+        {
+          "id": "druid",
+          "name": "Druida (Druid)",
+          "role": "Soporte de Control y Sanación en Área",
+          "description": "Combina curaciones continuas con raíces que inmovilizan a grupos de enemigos.",
+          "bestWeapons": ["Báculo de roble ancestral", "Vara de la naturaleza"],
+          "bestArmor": ["Túnica druídica de lino reforzado"],
+          "recommendedRunes": ["Runa de Raíces Espinosas", "Runa de Rocío Curativo"],
+          "familyRole": "Mantiene con vida al equipo completo en mazmorras difíciles.",
+          "pvpRating": 5,
+          "pveRating": 5,
+          "soloRating": 4,
+          "familyRating": 5,
+          "counters": ["Berserk (inmovilizado por raíces)", "Protector"],
+          "counteredBy": ["Sorcerer (dispel masivo)"],
+          "tips": [
+            "Usa las raíces justo cuando los atacantes gasten su habilidad de escape o carga."
+          ]
+        },
+        {
+          "id": "sorcerer",
+          "name": "Hechicero (Sorcerer)",
+          "role": "Dispel Maestro / Anti-Magia / Meta PvP",
+          "description": "Capaz de eliminar todas las mejoras del enemigo (dispel) y quitar efectos de control de aliados.",
+          "bestWeapons": ["Báculo del vacío", "Grimorio oscuro"],
+          "bestArmor": ["Túnica rúnica de seda mágica"],
+          "recommendedRunes": ["Runa de Anulación Mágica", "Runa de Vórtice Disipador"],
+          "familyRole": "El rol más codiciado en combates competitivos PvP de clanes.",
+          "pvpRating": 5,
+          "pveRating": 3,
+          "soloRating": 3,
+          "familyRating": 5,
+          "counters": ["Druid", "Fire Mage", "Wind Mage", "Protector"],
+          "counteredBy": ["Sharpshooter (snipe a larga distancia fuera de rango de dispel)"],
+          "tips": [
+            "Tu prioridad absoluta es disipar la inmunidad y las auras de curación del rival."
+          ]
+        },
+        {
+          "id": "nosferatu",
+          "name": "Nosferatu",
+          "role": "Lifesteal Bruiser / Asesino Vampírico / Meta PvP",
+          "description": "Drena vida con cada golpe y posee inmunidad temporal que anula los ataques más fuertes.",
+          "bestWeapons": ["Dagas ensangrentadas", "Hoz vampírica"],
+          "bestArmor": ["Armadura ligera de cuero negro"],
+          "recommendedRunes": ["Runa de Drenaje Vital", "Runa de Niebla Espectral"],
+          "familyRole": "Asesino implacable de segunda línea que gana todos los 1v1.",
+          "pvpRating": 5,
+          "pveRating": 4,
+          "soloRating": 5,
+          "familyRating": 4,
+          "counters": ["Wind Mage", "Pathfinder", "Berserk"],
+          "counteredBy": ["Protector bien coordinado", "Druid con raíces"],
+          "tips": [
+            "Guarda tu forma espectral/inmunidad para cuando el rival lance su combo de máximo daño."
+          ]
+        },
+        {
+          "id": "fire_mage",
+          "name": "Mago de Fuego (Fire Mage)",
+          "role": "DPS Mágico Masivo en Área / Rey de PvE",
+          "description": "Lanza meteoros y bolas de fuego con daño por quemadura continuo que ignora armadura física.",
+          "bestWeapons": ["Báculo de fuego de Odín", "Vara de piromante"],
+          "bestArmor": ["Túnica de llamas doradas"],
+          "recommendedRunes": ["Runa de Ignición Extrema", "Runa de Lluvia de Meteoros"],
+          "familyRole": "Limpieza veloz de salas completas en el Sanctum y daño demoledor a jefes.",
+          "pvpRating": 4,
+          "pveRating": 5,
+          "soloRating": 4,
+          "familyRating": 5,
+          "counters": ["Protector (daño ignora armadura)", "Grupos apretados"],
+          "counteredBy": ["Sorcerer (dispel)", "Berserk con salto", "Sharpshooter"],
+          "tips": [
+            "En el Sanctum, atrae grupos de enemigos a la puerta y usa la lluvia de fuego."
+          ]
+        },
+        {
+          "id": "wind_mage",
+          "name": "Mago de Viento (Wind Mage)",
+          "role": "Empujes, Control de Distancia y Burst Rápido",
+          "description": "Manipula ráfagas de viento para alejar enemigos peligrosos o lanzarlos contra trampas.",
+          "bestWeapons": ["Báculo de la tormenta", "Vara del céfiro"],
+          "bestArmor": ["Túnica de viento"],
+          "recommendedRunes": ["Runa de Vendaval Ciclónico", "Runa de Ráfaga Cortante"],
+          "familyRole": "Dispersa formaciones rivales y rescata a aliados en peligro.",
+          "pvpRating": 4,
+          "pveRating": 4,
+          "soloRating": 4,
+          "familyRating": 4,
+          "counters": ["Berserk (lo empuja y no lo deja pegar)"],
+          "counteredBy": ["Nosferatu (inmune a empujes en forma espectral)"],
+          "tips": [
+            "Excelente en el puente de entrada de mazmorras para empujar rivales fuera de posición."
+          ]
+        }
+      ]
+    }
+  ]
+}

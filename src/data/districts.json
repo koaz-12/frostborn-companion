@@ -1,0 +1,2969 @@
+{
+  "gameVersion": "1.35.x",
+  "source": "https://frostborn-coop-survival.fandom.com/wiki/New_Heim",
+  "lastUpdated": "2026-09-08",
+  "maxLevel": 185,
+  "levels": [
+    {
+      "level": 1,
+      "requirements": {
+        "materials": {
+          "pine_log": 3,
+          "limestone": 3
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 0 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 2,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1",
+        "Población: 6 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 3,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Altar of Odin lvl 1 - Ability to level up classes now possible in your district.",
+        "Población: 6 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 4,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tavern lvl 1 - unlock daily tasks. Requires character lvl 12 Crafting unlocked: Scout's Table , Family Banner , Garden , Woodworking Table",
+        "Población: 12 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 5,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 12 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 6,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 12 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 7,
+      "requirements": {
+        "materials": {
+          "limestone": 5,
+          "pine_log": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman lvl 1 Crafting unlocked: Rune Bag , Raider's Hatchet , Smelter , Bolas , Rusty Knife , Apprentice's Staff , Shield and Sword",
+        "Población: 18 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 8,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 18 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 9,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortifications lvl 1",
+        "Población: 24 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 10,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 24 habitantes • Impuesto diario de plata: 0%"
+      ]
+    },
+    {
+      "level": 11,
+      "requirements": {
+        "materials": {
+          "limestone": 10,
+          "pine_log": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tax Collector lvl 1",
+        "Población: 30 habitantes • Impuesto diario de plata: 3-6%"
+      ]
+    },
+    {
+      "level": 12,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Trader lvl 1",
+        "Población: 35 habitantes • Impuesto diario de plata: 4-7%"
+      ]
+    },
+    {
+      "level": 13,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 35 habitantes • Impuesto diario de plata: 4-7%"
+      ]
+    },
+    {
+      "level": 14,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 35 habitantes • Impuesto diario de plata: 4-7%"
+      ]
+    },
+    {
+      "level": 15,
+      "requirements": {
+        "materials": {
+          "pine_log": 15,
+          "limestone": 10,
+          "planks": 1
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 1",
+        "Población: 40 habitantes • Impuesto diario de plata: 4-8%"
+      ]
+    },
+    {
+      "level": 16,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 1,
+          "pine_log": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Founder statue lvl 1",
+        "Población: 42 habitantes • Impuesto diario de plata: 4-8%"
+      ]
+    },
+    {
+      "level": 17,
+      "requirements": {
+        "materials": {
+          "planks": 3,
+          "limestone": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman lvl 2 Crafting unlocked: Horse Stall , Log Storage , Log Rack , Lumberjack's Block , Tanning Rack , Basic Lockpick",
+        "Población: 44 habitantes • Impuesto diario de plata: 4-9%"
+      ]
+    },
+    {
+      "level": 18,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Población: 44 habitantes • Impuesto diario de plata: 4-9%"
+      ]
+    },
+    {
+      "level": 19,
+      "requirements": {
+        "materials": {
+          "pine_log": 20,
+          "limestone": 20,
+          "planks": 4,
+          "iron_ingot": 2
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Scout lvl1",
+        "Población: 46 habitantes • Impuesto diario de plata: 5-9%"
+      ]
+    },
+    {
+      "level": 20,
+      "requirements": {
+        "materials": {},
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Site Clearing + More slots for class runes added.",
+        "Población: 46 habitantes • Impuesto diario de plata: 5-9%"
+      ]
+    },
+    {
+      "level": 21,
+      "requirements": {
+        "materials": {
+          "planks": 6,
+          "iron_ingot": 4,
+          "leather": 1,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1",
+        "Población: 49 habitantes • Impuesto diario de plata: 5-10%"
+      ]
+    },
+    {
+      "level": 22,
+      "requirements": {
+        "materials": {
+          "pine_log": 30,
+          "bone_fastener": 2,
+          "limestone": 30
+        },
+        "influencePoints": 10
+      },
+      "unlocks": [
+        "Fortifications lvl 1",
+        "Población: 51 habitantes • Impuesto diario de plata: 5-10%"
+      ]
+    },
+    {
+      "level": 23,
+      "requirements": {
+        "materials": {
+          "limestone": 30,
+          "planks": 10,
+          "soul_stone": 2,
+          "dragon_scale": 1,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Shaman lvl 1 - Increases your chances to find rare items in sanctums.",
+        "Población: 52 habitantes • Impuesto diario de plata: 5-10%"
+      ]
+    },
+    {
+      "level": 24,
+      "requirements": {
+        "materials": {
+          "pine_log": 40,
+          "leather": 6,
+          "limestone": 20
+        },
+        "influencePoints": 10
+      },
+      "unlocks": [
+        "Gates lvl 1",
+        "Población: 54 habitantes • Impuesto diario de plata: 5-11%"
+      ]
+    },
+    {
+      "level": 25,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 5,
+          "chain": 3,
+          "planks": 10,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Crafstman lvl 3 Crafting unlocked: Bandages , Stonecutter's Table , Miner's Site , Miner's Wheelbarrow , Box for Stones , Engineer's Table , Trading Post , Meat Drier , Strong Pickaxe , Strong Hatchet , Crow Tower",
+        "Población: 55 habitantes • Impuesto diario de plata: 6-11%"
+      ]
+    },
+    {
+      "level": 26,
+      "requirements": {
+        "materials": {
+          "pine_log": 50,
+          "limestone": 50,
+          "resin": 3
+        },
+        "influencePoints": 10
+      },
+      "unlocks": [
+        "Architect lvl 1 - You will be able to install more doors and chests in your home camp Requires character lvl 36",
+        "Población: 56 habitantes • Impuesto diario de plata: 6-11%"
+      ]
+    },
+    {
+      "level": 27,
+      "requirements": {
+        "materials": {
+          "planks": 20,
+          "soul_stone": 3,
+          "dragon_scale": 3,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 2 +1 slot for storing items in the bank",
+        "Población: 57 habitantes • Impuesto diario de plata: 6-11%"
+      ]
+    },
+    {
+      "level": 28,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 10,
+          "stone_blocks": 10,
+          "chain": 3
+        },
+        "influencePoints": 10
+      },
+      "unlocks": [
+        "Craftsman lvl 4 Unlocks Hunter's Shack , Meat Rack , Bow Rack , Quilted Hat , Quilted Jacket , Quilted Boots , Bird Scout , Loom , Alchemists Table , Barrel with acid , Tree planting spot",
+        "Población: 58 habitantes • Impuesto diario de plata: 6-12%"
+      ]
+    },
+    {
+      "level": 29,
+      "requirements": {
+        "materials": {
+          "limestone": 60,
+          "pine_log": 60,
+          "planks": 20,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 1",
+        "Población: 60 habitantes • Impuesto diario de plata: 6-12%"
+      ]
+    },
+    {
+      "level": 30,
+      "requirements": {
+        "materials": {
+          "pine_log": 40,
+          "planks": 25,
+          "resin": 3
+        },
+        "influencePoints": 10
+      },
+      "unlocks": [
+        "Architect (Level 2) +4 Doors in Camp +3 Chests in Camp +1 Slots for class runes",
+        "Población: 61 habitantes • Impuesto diario de plata: 6-12%"
+      ],
+      "maxChests": 3,
+      "maxDoors": 4
+    },
+    {
+      "level": 31,
+      "requirements": {
+        "materials": {
+          "limestone": 80,
+          "stone_blocks": 20,
+          "soul_stone": 5,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "District Decorations (Level 1)",
+        "Población: 63 habitantes • Impuesto diario de plata: 6-13%"
+      ]
+    },
+    {
+      "level": 32,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 10,
+          "stone_blocks": 10,
+          "chain": 4
+        },
+        "influencePoints": 20
+      },
+      "unlocks": [
+        "Craftsman (Level 5) Unlocks new blueprints: Distiller , Armor Dummy , Pedestal, Apprentice's Hood , Apprentice's Cape , Apprentice's Pants , Apprentice's Boots , Lamp , Defender's Staff , Wizard's Staff , Fire Flask",
+        "Población: 64 habitantes • Impuesto diario de plata: 6-13%"
+      ]
+    },
+    {
+      "level": 33,
+      "requirements": {
+        "materials": {
+          "pine_log": 50,
+          "dragon_scale": 5,
+          "limestone": 40,
+          "silver": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Spikes (Level 1)",
+        "Población: 66 habitantes • Impuesto diario de plata: 7-13%"
+      ]
+    },
+    {
+      "level": 34,
+      "requirements": {
+        "materials": {
+          "planks": 25,
+          "resin": 5,
+          "bone_fastener": 5,
+          "leather": 10
+        },
+        "influencePoints": 20
+      },
+      "unlocks": [
+        "Tax Collector (Level 2) Increases taxes by 3%",
+        "Población: 67 habitantes • Impuesto diario de plata: 8-15%"
+      ]
+    },
+    {
+      "level": 35,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 15,
+          "stone_blocks": 15,
+          "soul_stone": 5,
+          "chain": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman (Level 6) Unlocks 11 new blueprints: Ritual Dagger , Cursed Bow , Leather Hood , Leather Chest , Leather Pants , Leather Boots , Flower Pot , Healing Salve , Golem Warrior I, Training Guide, Training Manual",
+        "Población: 68 habitantes • Impuesto diario de plata: 8-16%"
+      ]
+    },
+    {
+      "level": 36,
+      "requirements": {
+        "materials": {
+          "limestone": 100,
+          "pine_log": 100,
+          "dragon_scale": 4
+        },
+        "influencePoints": 20
+      },
+      "unlocks": [
+        "Well lvl 1",
+        "Población: 70 habitantes • Impuesto diario de plata: 8-16%"
+      ]
+    },
+    {
+      "level": 37,
+      "requirements": {
+        "materials": {
+          "planks": 30,
+          "soul_stone": 10,
+          "bone_fastener": 8,
+          "stone_blocks": 15,
+          "silver": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 3",
+        "Población: 71 habitantes • Impuesto diario de plata: 8-16%"
+      ]
+    },
+    {
+      "level": 38,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "ghost_flower": 1,
+          "resin": 8,
+          "pliers": 2
+        },
+        "influencePoints": 40
+      },
+      "unlocks": [
+        "Greenery lvl 1",
+        "Población: 73 habitantes • Impuesto diario de plata: 8-17%"
+      ]
+    },
+    {
+      "level": 39,
+      "requirements": {
+        "materials": {
+          "thick_fabric": 10,
+          "stone_blocks": 20,
+          "chain": 10,
+          "fish_glue": 2,
+          "silver": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Trader lvl 2",
+        "Población: 74 habitantes • Impuesto diario de plata: 9-17%"
+      ]
+    },
+    {
+      "level": 40,
+      "requirements": {
+        "materials": {
+          "maple_plank": 2,
+          "metal_parts": 5,
+          "iron_ingot": 15
+        },
+        "influencePoints": 60
+      },
+      "unlocks": [
+        "Craftsman lvl 7 Crafting unlocked: Raider's Helm , Raider's Chest , Raider's Pants , Raider's boots , Workbench , Strong Shield and Sword , Bone Mace , Shovel Slots for class runes : +1",
+        "Población: 75 habitantes • Impuesto diario de plata: 9-17%"
+      ]
+    },
+    {
+      "level": 41,
+      "requirements": {
+        "materials": {
+          "planks": 25,
+          "stone_blocks": 10,
+          "leather": 10,
+          "nails": 8,
+          "silver": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1 Attracts new Residents, allowing you to increase taxes Requires character lvl 66",
+        "Población: 78 habitantes • Impuesto diario de plata: 9-18%"
+      ]
+    },
+    {
+      "level": 42,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 2,
+          "alchemical_powder": 6,
+          "ghost_flower": 4
+        },
+        "influencePoints": 80
+      },
+      "unlocks": [
+        "Tavern lvl 2 Daily task in the tavern +5 (not really making sense... always have 5 and can pick 3)",
+        "Población: 79 habitantes • Impuesto diario de plata: 9-18%"
+      ]
+    },
+    {
+      "level": 43,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "dragon_scale": 8,
+          "bone_fastener": 8,
+          "iron_ingot": 16,
+          "silver": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Scout lvl 2 Scout event difficulty level +1",
+        "Población: 80 habitantes • Impuesto diario de plata: 9-18%"
+      ]
+    },
+    {
+      "level": 44,
+      "requirements": {
+        "materials": {
+          "maple_log": 2,
+          "leather": 10,
+          "iron_ingot": 12,
+          "resin": 6
+        },
+        "influencePoints": 100
+      },
+      "unlocks": [
+        "Craftsman lvl 8 Crafting unlocked: Large Sack , Thief's Lockpick , Helm , Cannonball , Buckshot , Chain Shot , Advanced Smelter , Chain",
+        "Población: 81 habitantes • Impuesto diario de plata: 9-19%"
+      ]
+    },
+    {
+      "level": 45,
+      "requirements": {
+        "materials": {
+          "stone_blocks": 25,
+          "planks": 25,
+          "nails": 8,
+          "thick_fabric": 12,
+          "silver": 90
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "District decorations lvl 1",
+        "Población: 83 habitantes • Impuesto diario de plata: 10-19%"
+      ]
+    },
+    {
+      "level": 46,
+      "requirements": {
+        "materials": {
+          "planks": 30,
+          "soul_stone": 12,
+          "dragon_scale": 12,
+          "stone_blocks": 20
+        },
+        "influencePoints": 130
+      },
+      "unlocks": [
+        "Bank lvl 4 +1 slots",
+        "Población: 84 habitantes • Impuesto diario de plata: 10-19%"
+      ]
+    },
+    {
+      "level": 47,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 10,
+          "limestone": 200,
+          "pliers": 12,
+          "silver": 120
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortifications lvl 1",
+        "Población: 86 habitantes • Impuesto diario de plata: 10-20%"
+      ]
+    },
+    {
+      "level": 48,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 2,
+          "maple_plank": 2,
+          "fish_glue": 3
+        },
+        "influencePoints": 160
+      },
+      "unlocks": [
+        "Founder statue lvl 2",
+        "Población: 87 habitantes • Impuesto diario de plata: 10-20%"
+      ]
+    },
+    {
+      "level": 49,
+      "requirements": {
+        "materials": {
+          "pine_log": 160,
+          "leather": 20,
+          "limestone": 160,
+          "metal_parts": 20,
+          "silver": 150
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 1",
+        "Población: 89 habitantes • Impuesto diario de plata: 10-20%"
+      ]
+    },
+    {
+      "level": 50,
+      "requirements": {
+        "materials": {
+          "planks": 50,
+          "soul_stone": 10,
+          "alchemical_powder": 10,
+          "ghost_flower": 5
+        },
+        "influencePoints": 190
+      },
+      "unlocks": [
+        "Shaman lvl 2 Chance to find rare items in sanctums +2% Class runs slots +1 Crafting unlocked: Golem Sorcerer lvl 1",
+        "Población: 90 habitantes • Impuesto diario de plata: 10-21%"
+      ]
+    },
+    {
+      "level": 51,
+      "requirements": {
+        "materials": {
+          "maple_plank": 3,
+          "stone_blocks": 15,
+          "iron_ingot": 15,
+          "resin": 8,
+          "silver": 180
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman lvl 9 Crafting unlocked: Bath , Couch , Bed , Dragon Staff , Wizard's Hood , Wizard's Cape , Wizard's Pants , Wizard's Boots , Staff of Blessing , Cursed Flask, Golem Archer lvl 1",
+        "Población: 91 habitantes • Impuesto diario de plata: 10-21%"
+      ]
+    },
+    {
+      "level": 52,
+      "requirements": {
+        "materials": {
+          "planks": 40,
+          "stone_blocks": 30,
+          "leather": 12,
+          "nails": 12
+        },
+        "influencePoints": 220
+      },
+      "unlocks": [
+        "House (Level 1)",
+        "Población: 94 habitantes • Impuesto diario de plata: 10-22%"
+      ]
+    },
+    {
+      "level": 53,
+      "requirements": {
+        "materials": {
+          "pine_log": 100,
+          "chain": 20,
+          "pliers": 20,
+          "thick_fabric": 25,
+          "bone_fastener": 20,
+          "silver": 210
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Guide's house lvl 1 Crafting unlocked: Blacksmith's Workbench , Tool Table , Anvil , Barrel of Solution , Grindstone , Magic Workbench , Runestone , Magic Press , Alchemy Cube , Recipe book , Cooking Pot Will open Jötunheim Gates in the north and other locations through it.",
+        "Población: 96 habitantes • Impuesto diario de plata: 11-22%"
+      ]
+    },
+    {
+      "level": 54,
+      "requirements": {
+        "materials": {
+          "pine_log": 100,
+          "planks": 50,
+          "resin": 20
+        },
+        "influencePoints": 260
+      },
+      "unlocks": [
+        "Architect lvl 3 +3 Chest +5 Doors",
+        "Población: 97 habitantes • Impuesto diario de plata: 11-22%"
+      ],
+      "maxDoors": 5
+    },
+    {
+      "level": 55,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "iron_ingot": 18,
+          "maple_plank": 1,
+          "fish_glue": 4,
+          "silver": 240
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Spikes lvl 1",
+        "Población: 99 habitantes • Impuesto diario de plata: 11-23%"
+      ]
+    },
+    {
+      "level": 56,
+      "requirements": {
+        "materials": {
+          "planks": 20,
+          "soul_stone": 20,
+          "dragon_scale": 20,
+          "stone_blocks": 35
+        },
+        "influencePoints": 300
+      },
+      "unlocks": [
+        "Bank lvl 5 +1 slots",
+        "Población: 100 habitantes • Impuesto diario de plata: 12-23%"
+      ]
+    },
+    {
+      "level": 57,
+      "requirements": {
+        "materials": {
+          "chain": 10,
+          "leather": 20,
+          "limestone": 180,
+          "copper_ingot": 4,
+          "silver": 260
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 1",
+        "Población: 102 habitantes • Impuesto diario de plata: 12-23%"
+      ]
+    },
+    {
+      "level": 58,
+      "requirements": {
+        "materials": {
+          "thick_fabric": 40,
+          "ghost_flower": 5,
+          "alchemical_powder": 10,
+          "metal_parts": 12,
+          "chain": 20
+        },
+        "influencePoints": 380
+      },
+      "unlocks": [
+        "Trader lvl 3 Slots for daily goods: +1",
+        "Población: 103 habitantes • Impuesto diario de plata: 12-24%"
+      ]
+    },
+    {
+      "level": 59,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "fish_glue": 10,
+          "resin": 8,
+          "pliers": 12,
+          "silver": 260
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery Lvl 1",
+        "Población: 104 habitantes • Impuesto diario de plata: 12-24%"
+      ]
+    },
+    {
+      "level": 60,
+      "requirements": {
+        "materials": {
+          "soul_stone": 40,
+          "limestone": 120,
+          "bone_fastener": 30,
+          "iron_ingot": 35
+        },
+        "influencePoints": 460
+      },
+      "unlocks": [
+        "Architect lvl 4 +6 door limit +3 chest limit +1 class runes slots",
+        "Población: 106 habitantes • Impuesto diario de plata: 12-24%"
+      ]
+    },
+    {
+      "level": 61,
+      "requirements": {
+        "materials": {
+          "planks": 50,
+          "stone_blocks": 20,
+          "leather": 20,
+          "nails": 20,
+          "silver": 270
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House Lvl 1",
+        "Población: 109 habitantes • Impuesto diario de plata: 13-25%"
+      ]
+    },
+    {
+      "level": 62,
+      "requirements": {
+        "materials": {
+          "limestone": 250,
+          "pine_log": 250,
+          "planks": 80
+        },
+        "influencePoints": 540
+      },
+      "unlocks": [
+        "Jaeger's House lvl 1 Allows you to improve your pets and their skills at the new NPC the Jaeger .",
+        "Población: 110 habitantes • Impuesto diario de plata: 13-26%"
+      ]
+    },
+    {
+      "level": 63,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 2,
+          "maple_plank": 2,
+          "dragon_scale": 18,
+          "stone_blocks": 30,
+          "soul_stone": 15,
+          "silver": 270
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 6 +1 slot",
+        "Población: 111 habitantes • Impuesto diario de plata: 13-26%"
+      ]
+    },
+    {
+      "level": 64,
+      "requirements": {
+        "materials": {
+          "pine_log": 100,
+          "chain": 40,
+          "pliers": 30,
+          "thick_fabric": 25,
+          "bone_fastener": 30
+        },
+        "influencePoints": 600
+      },
+      "unlocks": [
+        "Training Camp lvl 2",
+        "Población: 113 habitantes • Impuesto diario de plata: 13-26%"
+      ]
+    },
+    {
+      "level": 65,
+      "requirements": {
+        "materials": {
+          "planks": 45,
+          "resin": 15,
+          "dragon_scale": 20,
+          "leather": 15,
+          "silver": 300
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tax Collector lvl 3 (tax increase by 3%)",
+        "Población: 115 habitantes • Impuesto diario de plata: 15-30%"
+      ]
+    },
+    {
+      "level": 66,
+      "requirements": {
+        "materials": {
+          "maple_plank": 4,
+          "stone_blocks": 30,
+          "iron_ingot": 30,
+          "alchemical_powder": 10
+        },
+        "influencePoints": 600
+      },
+      "unlocks": [
+        "Craftsman lvl 10 Crafting unlocked: Master Thief's Lockpick , Dining Table , Pathfinder's Hat , Pathfinder's Jacket , Pathfinder's Pants , Pathfinder's Boots , Cursed Dagger , Crossbow of Shadows , Bucket",
+        "Población: 116 habitantes • Impuesto diario de plata: 15-30%"
+      ]
+    },
+    {
+      "level": 67,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 4,
+          "maple_plank": 2,
+          "fish_glue": 5,
+          "silver": 300
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Founder Statue lvl 3 Unlocks an event for the district's guests Requires character lvl 96",
+        "Población: 117 habitantes • Impuesto diario de plata: 15-30%"
+      ]
+    },
+    {
+      "level": 68,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 35,
+          "limestone": 200,
+          "pliers": 30,
+          "resin": 10,
+          "silver": 300
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 2"
+      ]
+    },
+    {
+      "level": 69,
+      "requirements": {
+        "materials": {
+          "soul_stone": 60,
+          "limestone": 140,
+          "nails": 30,
+          "thick_fabric": 30,
+          "silver": 310
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Architect lvl 5 +7 to the door limit +4 to the chest limit"
+      ]
+    },
+    {
+      "level": 70,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "iron_ingot": 30,
+          "maple_plank": 2,
+          "fish_glue": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Spikes lvl 1"
+      ]
+    },
+    {
+      "level": 71,
+      "requirements": {
+        "materials": {
+          "ghost_flower": 12,
+          "dragon_scale": 20,
+          "bone_fastener": 30,
+          "metal_parts": 25
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Scout lvl 3",
+        "Población: 123 habitantes • Impuesto diario de plata: 16-32%"
+      ]
+    },
+    {
+      "level": 72,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 60,
+          "leather": 20,
+          "nails": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1",
+        "Población: 126 habitantes • Impuesto diario de plata: 16-33%"
+      ]
+    },
+    {
+      "level": 73,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 3,
+          "maple_plank": 3,
+          "chain": 40,
+          "stone_blocks": 60,
+          "soul_stone": 25
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 7",
+        "Población: 127 habitantes • Impuesto diario de plata: 17-33%"
+      ]
+    },
+    {
+      "level": 74,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 50,
+          "leather": 20,
+          "metal_parts": 30,
+          "iron_ingot": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1",
+        "Población: 130 habitantes • Impuesto diario de plata: 17-34%"
+      ]
+    },
+    {
+      "level": 75,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "alchemical_powder": 15,
+          "ghost_flower": 12
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tavern lvl 3",
+        "Población: 131 habitantes • Impuesto diario de plata: 17-34%"
+      ]
+    },
+    {
+      "level": 76,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 20,
+          "fish_glue": 7
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 134 habitantes • Impuesto diario de plata: 17-35%"
+      ]
+    },
+    {
+      "level": 77,
+      "requirements": {
+        "materials": {
+          "maple_plank": 4,
+          "dragon_scale": 30,
+          "stone_blocks": 30,
+          "soul_stone": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 8",
+        "Población: 135 habitantes • Impuesto diario de plata: 18-35%"
+      ]
+    },
+    {
+      "level": 78,
+      "requirements": {
+        "materials": {
+          "limestone": 140,
+          "pine_log": 140,
+          "resin": 30,
+          "thick_fabric": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Well lvl 2",
+        "Población: 137 habitantes • Impuesto diario de plata: 18-36%"
+      ]
+    },
+    {
+      "level": 79,
+      "requirements": {
+        "materials": {
+          "ghost_flower": 12,
+          "dragon_scale": 20,
+          "bone_fastener": 30,
+          "metal_parts": 25,
+          "iron_ingot": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Scout lvl 4",
+        "Población: 138 habitantes • Impuesto diario de plata: 18-36%"
+      ]
+    },
+    {
+      "level": 80,
+      "requirements": {
+        "materials": {
+          "limestone": 200,
+          "pine_log": 200,
+          "planks": 80,
+          "pliers": 30,
+          "nails": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 1 Crafting unlocked: Steel Pickaxe Unlocks passage through the Elven Gate in the south to new lands.",
+        "Población: 140 habitantes • Impuesto diario de plata: 18-36%"
+      ]
+    },
+    {
+      "level": 81,
+      "requirements": {
+        "materials": {
+          "maple_plank": 2,
+          "stone_blocks": 30,
+          "iron_ingot": 30,
+          "resin": 20,
+          "alchemical_powder": 15
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman lvl 11",
+        "Población: 141 habitantes • Impuesto diario de plata: 18-37%"
+      ]
+    },
+    {
+      "level": 82,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "maple_plank": 2,
+          "dragon_scale": 25,
+          "pine_log": 80,
+          "soul_stone": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 9",
+        "Población: 142 habitantes • Impuesto diario de plata: 18-37%"
+      ]
+    },
+    {
+      "level": 83,
+      "requirements": {
+        "materials": {
+          "soul_stone": 40,
+          "limestone": 120,
+          "bone_fastener": 40,
+          "iron_ingot": 30,
+          "resin": 15
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Stable lvl 1 This unlocks the stable master and the ability to combine mounts to increase their level.",
+        "Población: 144 habitantes • Impuesto diario de plata: 19-37%"
+      ]
+    },
+    {
+      "level": 84,
+      "requirements": {
+        "materials": {
+          "limestone": 220,
+          "pine_log": 220,
+          "planks": 80,
+          "pliers": 40,
+          "nails": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 1",
+        "Población: 146 habitantes • Impuesto diario de plata: 19-38%"
+      ]
+    },
+    {
+      "level": 85,
+      "requirements": {
+        "materials": {
+          "thick_fabric": 40,
+          "ghost_flower": 15,
+          "alchemical_powder": 20,
+          "metal_parts": 30,
+          "chain": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Trader lvl 4",
+        "Población: 147 habitantes • Impuesto diario de plata: 19-38%"
+      ]
+    },
+    {
+      "level": 86,
+      "requirements": {
+        "materials": {
+          "chain": 40,
+          "leather": 35,
+          "limestone": 180,
+          "copper_ingot": 8
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 2",
+        "Población: 149 habitantes • Impuesto diario de plata: 19-39%"
+      ]
+    },
+    {
+      "level": 87,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 25,
+          "fish_glue": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 152 habitantes • Impuesto diario de plata: 20-40%"
+      ]
+    },
+    {
+      "level": 88,
+      "requirements": {
+        "materials": {
+          "resin": 25,
+          "leather": 30,
+          "limestone": 120,
+          "maple_plank": 6
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 2",
+        "Población: 154 habitantes • Impuesto diario de plata: 20-40%"
+      ]
+    },
+    {
+      "level": 89,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 35,
+          "iron_ingot": 60,
+          "pliers": 30,
+          "chain": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortifications lvl 2",
+        "Población: 156 habitantes • Impuesto diario de plata: 20-41%"
+      ]
+    },
+    {
+      "level": 90,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "soul_stone": 45,
+          "dragon_scale": 30,
+          "stone_blocks": 80
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 10",
+        "Población: 157 habitantes • Impuesto diario de plata: 20-41%"
+      ]
+    },
+    {
+      "level": 91,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "iron_ingot": 25,
+          "maple_plank": 4,
+          "ghost_flower": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification for the district's defenses"
+      ]
+    },
+    {
+      "level": 92,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 20,
+          "fish_glue": 12
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Housing level 2",
+        "Población: 162 habitantes • Impuesto diario de plata: 21-42%"
+      ]
+    },
+    {
+      "level": 93,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 12,
+          "alchemical_powder": 15,
+          "thick_fabric": 40,
+          "metal_parts": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tavern lvl 4",
+        "Población: 163 habitantes • Impuesto diario de plata: 21-42%"
+      ]
+    },
+    {
+      "level": 94,
+      "requirements": {
+        "materials": {
+          "limestone": 300,
+          "bone_fastener": 40,
+          "planks": 70,
+          "nails": 40,
+          "chain": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortifications lvl 2",
+        "Población: 165 habitantes • Impuesto diario de plata: 21-43%"
+      ]
+    },
+    {
+      "level": 95,
+      "requirements": {
+        "materials": {
+          "pine_log": 100,
+          "soul_stone": 30,
+          "pliers": 30,
+          "ghost_flower": 20,
+          "bone_fastener": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Training Camp lvl 3",
+        "Población: 167 habitantes • Impuesto diario de plata: 22-43%"
+      ]
+    },
+    {
+      "level": 96,
+      "requirements": {
+        "materials": {
+          "maple_plank": 6,
+          "stone_blocks": 80,
+          "iron_ingot": 40,
+          "resin": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman lvl 12",
+        "Población: 168 habitantes • Impuesto diario de plata: 22-44%"
+      ]
+    },
+    {
+      "level": 97,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 8,
+          "maple_plank": 2,
+          "dragon_scale": 25,
+          "stone_blocks": 30,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 11 Requires character lvl 131",
+        "Población: 169 habitantes • Impuesto diario de plata: 22-44%"
+      ]
+    },
+    {
+      "level": 98,
+      "requirements": {
+        "materials": {
+          "pine_log": 180,
+          "alchemical_powder": 30,
+          "chain": 50,
+          "pliers": 40,
+          "metal_parts": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 1",
+        "Población: 171 habitantes • Impuesto diario de plata: 22-44%"
+      ]
+    },
+    {
+      "level": 99,
+      "requirements": {
+        "materials": {
+          "planks": 70,
+          "iron_ingot": 40,
+          "leather": 20,
+          "fish_glue": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 174 habitantes • Impuesto diario de plata: 23-45%"
+      ]
+    },
+    {
+      "level": 100,
+      "requirements": {
+        "materials": {
+          "stone_blocks": 80,
+          "planks": 80,
+          "nails": 35,
+          "thick_fabric": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "District Decorations lvl 2",
+        "Población: 176 habitantes • Impuesto diario de plata: 23-46%"
+      ]
+    },
+    {
+      "level": 101,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "planks": 4,
+          "dragon_scale": 30,
+          "stone_blocks": 45,
+          "chain": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 12",
+        "Población: 177 habitantes • Impuesto diario de plata: 23-46%"
+      ]
+    },
+    {
+      "level": 102,
+      "requirements": {
+        "materials": {
+          "limestone": 500,
+          "pine_log": 500,
+          "planks": 70,
+          "iron_ingot": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 2",
+        "Población: 179 habitantes • Impuesto diario de plata: 23-47%"
+      ]
+    },
+    {
+      "level": 103,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "stone_blocks": 60,
+          "leather": 30,
+          "fish_glue": 12
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 182 habitantes • Impuesto diario de plata: 23-47%"
+      ]
+    },
+    {
+      "level": 104,
+      "requirements": {
+        "materials": {
+          "thick_fabric": 40,
+          "ghost_flower": 20,
+          "alchemical_powder": 30,
+          "metal_parts": 30,
+          "chain": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Trader lvl 5",
+        "Población: 183 habitantes • Impuesto diario de plata: 24-47%"
+      ]
+    },
+    {
+      "level": 105,
+      "requirements": {
+        "materials": {
+          "limestone": 150,
+          "pine_log": 150,
+          "bone_fastener": 40,
+          "resin": 30,
+          "iron_ingot": 50
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Well lvl 3",
+        "Población: 185 habitantes • Impuesto diario de plata: 24-48%"
+      ]
+    },
+    {
+      "level": 106,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 8,
+          "maple_plank": 2,
+          "dragon_scale": 35,
+          "stone_blocks": 40,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 13 (13 slots total now)",
+        "Población: 186 habitantes • Impuesto diario de plata: 24-48%"
+      ]
+    },
+    {
+      "level": 107,
+      "requirements": {
+        "materials": {
+          "pine_log": 150,
+          "bone_fastener": 40,
+          "maple_plank": 2,
+          "nails": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Spikes lvl 2",
+        "Población: 188 habitantes • Impuesto diario de plata: 24-48%"
+      ]
+    },
+    {
+      "level": 108,
+      "requirements": {
+        "materials": {
+          "planks": 70,
+          "stone_blocks": 60,
+          "leather": 30,
+          "fish_glue": 14
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 191 habitantes • Impuesto diario de plata: 25-50%"
+      ]
+    },
+    {
+      "level": 109,
+      "requirements": {
+        "materials": {
+          "pine_log": 80,
+          "ghost_flower": 20,
+          "resin": 20,
+          "alchemical_powder": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 2",
+        "Población: 193 habitantes • Impuesto diario de plata: 25-50%"
+      ]
+    },
+    {
+      "level": 110,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 40,
+          "limestone": 200,
+          "pliers": 25,
+          "fish_glue": 16
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 3",
+        "Población: 195 habitantes • Impuesto diario de plata: 25-51%"
+      ]
+    },
+    {
+      "level": 111,
+      "requirements": {
+        "materials": {
+          "maple_plank": 10,
+          "stone_blocks": 40,
+          "iron_ingot": 30,
+          "resin": 20,
+          "nails": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Craftsman Level 13 Crafting unlocked: final 9 blueprints unlocked. This included very rare gear.",
+        "Población: 196 habitantes • Impuesto diario de plata: 25-51%"
+      ]
+    },
+    {
+      "level": 112,
+      "requirements": {
+        "materials": {
+          "dragon_scale": 4,
+          "stone_blocks": 15,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 14 (14 slots now)",
+        "Población: 197 habitantes • Impuesto diario de plata: 26-51%"
+      ]
+    },
+    {
+      "level": 113,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 30,
+          "fish_glue": 10,
+          "iron_plate": 8
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 1",
+        "Población: 200 habitantes • Impuesto diario de plata: 26-52%"
+      ]
+    },
+    {
+      "level": 114,
+      "requirements": {
+        "materials": {
+          "chain": 40,
+          "leather": 30,
+          "limestone": 180,
+          "copper_ingot": 15
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 3",
+        "Población: 202 habitantes • Impuesto diario de plata: 26-53%"
+      ]
+    },
+    {
+      "level": 115,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 2,
+          "maple_plank": 10,
+          "dragon_scale": 30,
+          "stone_blocks": 70,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 15 (15 slots now)",
+        "Población: 203 habitantes • Impuesto diario de plata: 26-53%"
+      ]
+    },
+    {
+      "level": 116,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 30,
+          "leather": 30,
+          "fish_glue": 10,
+          "iron_plate": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 206 habitantes • Impuesto diario de plata: 27-54%"
+      ]
+    },
+    {
+      "level": 117,
+      "requirements": {
+        "materials": {
+          "pine_log": 160,
+          "nails": 40,
+          "maple_plank": 12,
+          "metal_parts": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Spikes level 2",
+        "Población: 208 habitantes • Impuesto diario de plata: 27-54%"
+      ]
+    },
+    {
+      "level": 118,
+      "requirements": {
+        "materials": {
+          "gold_ore": 5,
+          "alchemical_powder": 10,
+          "ghost_flower": 8
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tavern lvl 5 (List 3 open in daily task rewards)",
+        "Población: 209 habitantes • Impuesto diario de plata: 27-54%"
+      ]
+    },
+    {
+      "level": 119,
+      "requirements": {
+        "materials": {
+          "pine_log": 400,
+          "bone_fastener": 60,
+          "limestone": 400,
+          "pliers": 40,
+          "rune_of_power": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 3",
+        "Población: 211 habitantes • Impuesto diario de plata: 27-55%"
+      ]
+    },
+    {
+      "level": 120,
+      "requirements": {
+        "materials": {
+          "pine_log": 250,
+          "limestone": 250,
+          "planks": 80,
+          "resin": 35,
+          "iron_ingot": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Disctrict Roads upgrade Rune slots +2",
+        "Población: 213 habitantes • Impuesto diario de plata: 28-55%"
+      ]
+    },
+    {
+      "level": 121,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 10,
+          "maple_plank": 4,
+          "dragon_scale": 35,
+          "stone_blocks": 40,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 16 Slot for storing + 1",
+        "Población: 214 habitantes • Impuesto diario de plata: 28-56%"
+      ]
+    },
+    {
+      "level": 122,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "stone_blocks": 40,
+          "leather": 35,
+          "forged_fasteners": 4,
+          "nails": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Howse lvl 2",
+        "Población: 217 habitantes • Impuesto diario de plata: 28-56%"
+      ]
+    },
+    {
+      "level": 123,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "resin": 50,
+          "limestone": 200,
+          "pliers": 60,
+          "metal_parts": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 3",
+        "Población: 219 habitantes • Impuesto diario de plata: 28-57%"
+      ]
+    },
+    {
+      "level": 124,
+      "requirements": {
+        "materials": {
+          "limestone": 300,
+          "pine_log": 300,
+          "planks": 80,
+          "resin": 35,
+          "iron_ore": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 2",
+        "Población: 221 habitantes • Impuesto diario de plata: 29-57%"
+      ]
+    },
+    {
+      "level": 125,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 10,
+          "maple_plank": 8,
+          "alchemical_powder": 25,
+          "stone_blocks": 40,
+          "soul_stone": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 17",
+        "Población: 222 habitantes • Impuesto diario de plata: 29-58%"
+      ]
+    },
+    {
+      "level": 126,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 30,
+          "leather": 35,
+          "sulphur": 12,
+          "iron_plate": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 225 habitantes • Impuesto diario de plata: 29-58%"
+      ]
+    },
+    {
+      "level": 127,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "chain": 40,
+          "limestone": 200,
+          "pliers": 30,
+          "fish_glue": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 4",
+        "Población: 227 habitantes • Impuesto diario de plata: 30-59%"
+      ]
+    },
+    {
+      "level": 128,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 30,
+          "forged_fasteners": 6
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 2",
+        "Población: 230 habitantes • Impuesto diario de plata: 30-60%"
+      ]
+    },
+    {
+      "level": 129,
+      "requirements": {
+        "materials": {
+          "ghost_flower": 20,
+          "dragon_scale": 40,
+          "bone_fastener": 60,
+          "iron_ingot": 40,
+          "metal_parts": 50
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Scout lvl 5 level difficulty +1",
+        "Población: 231 habitantes • Impuesto diario de plata: 30-60%"
+      ]
+    },
+    {
+      "level": 130,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 30,
+          "leather": 30,
+          "fish_glue": 14,
+          "iron_plate": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 234 habitantes • Impuesto diario de plata: 30-61%"
+      ]
+    },
+    {
+      "level": 131,
+      "requirements": {
+        "materials": {
+          "resin": 35,
+          "pliers": 35,
+          "sealing_wax": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 1",
+        "Población: 236 habitantes • Impuesto diario de plata: 31-61%"
+      ]
+    },
+    {
+      "level": 132,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 10,
+          "maple_plank": 4,
+          "varnish": 20,
+          "stone_blocks": 40,
+          "alchemical_powder": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 18 +1 slot",
+        "Población: 237 habitantes • Impuesto diario de plata: 31-62%"
+      ]
+    },
+    {
+      "level": 133,
+      "requirements": {
+        "materials": {
+          "rune_of_power": 25,
+          "chain": 50,
+          "nails": 40,
+          "thick_fabric": 40,
+          "bone_fastener": 45
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Training Camp lvl 4",
+        "Población: 239 habitantes • Impuesto diario de plata: 31-62%"
+      ]
+    },
+    {
+      "level": 134,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 40,
+          "leather": 40,
+          "forged_fasteners": 4,
+          "tin_rod": 4
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 242 habitantes • Impuesto diario de plata: 31-63%"
+      ]
+    },
+    {
+      "level": 135,
+      "requirements": {
+        "materials": {
+          "bone_fastener": 40,
+          "leather": 20,
+          "limestone": 140,
+          "gold_ore": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 4",
+        "Población: 244 habitantes • Impuesto diario de plata: 32-63%"
+      ]
+    },
+    {
+      "level": 136,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 8,
+          "maple_plank": 8,
+          "dragon_scale": 40,
+          "stone_blocks": 40,
+          "soul_stone": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 19 +1 slot",
+        "Población: 245 habitantes • Impuesto diario de plata: 32-64%"
+      ]
+    },
+    {
+      "level": 137,
+      "requirements": {
+        "materials": {
+          "limestone": 250,
+          "pine_log": 250,
+          "chain": 40,
+          "varnish": 20,
+          "sealing_wax": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Roads lvl 2",
+        "Población: 247 habitantes • Impuesto diario de plata: 32-64%"
+      ]
+    },
+    {
+      "level": 138,
+      "requirements": {
+        "materials": {
+          "gold_ingot": 3,
+          "soul_stone": 40,
+          "alchemical_powder": 30,
+          "ghost_flower": 15,
+          "sulphur": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Shaman lvl 3 (chance to find rare item in sanctums +2%)",
+        "Población: 248 habitantes • Impuesto diario de plata: 32-64%"
+      ]
+    },
+    {
+      "level": 139,
+      "requirements": {
+        "materials": {
+          "limestone": 300,
+          "pine_log": 300,
+          "bone_fastener": 60,
+          "resin": 40,
+          "iron_ingot": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Well lvl 4",
+        "Población: 250 habitantes • Impuesto diario de plata: 33-65%"
+      ]
+    },
+    {
+      "level": 140,
+      "requirements": {
+        "materials": {
+          "alchemical_powder": 30,
+          "ghost_flower": 10,
+          "soul_stone": 60,
+          "pliers": 40,
+          "sealing_wax": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 1",
+        "Población: 252 habitantes • Impuesto diario de plata: 33-66%"
+      ]
+    },
+    {
+      "level": 141,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 60,
+          "leather": 40,
+          "varnish": 15,
+          "tin_rod": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 255 habitantes • Impuesto diario de plata: 33-66%"
+      ]
+    },
+    {
+      "level": 142,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 10,
+          "maple_plank": 10,
+          "dragon_scale": 25,
+          "stone_blocks": 40,
+          "resin": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 20 +1 slot",
+        "Población: 256 habitantes • Impuesto diario de plata: 33-67%"
+      ]
+    },
+    {
+      "level": 143,
+      "requirements": {
+        "materials": {
+          "gold_ore": 4,
+          "rune_of_power": 20,
+          "bone_fastener": 40,
+          "leather": 40,
+          "thick_fabric": 50
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tax Collector lvl 4 (Residence taxes increased by 3%)",
+        "Población: 257 habitantes • Impuesto diario de plata: 37-75%"
+      ]
+    },
+    {
+      "level": 144,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 60,
+          "leather": 40,
+          "forged_fasteners": 5,
+          "iron_plate": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 260 habitantes • Impuesto diario de plata: 38-75%"
+      ]
+    },
+    {
+      "level": 145,
+      "requirements": {
+        "materials": {
+          "pine_log": 300,
+          "bone_fastener": 50,
+          "limestone": 300,
+          "nails": 20,
+          "sulphur": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 4",
+        "Población: 262 habitantes • Impuesto diario de plata: 38-76%"
+      ]
+    },
+    {
+      "level": 146,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 12,
+          "maple_plank": 10,
+          "resin": 30,
+          "dragon_scale": 10,
+          "chain": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 21 +1 slot",
+        "Población: 263 habitantes • Impuesto diario de plata: 38-76%"
+      ]
+    },
+    {
+      "level": 147,
+      "requirements": {
+        "materials": {
+          "chain": 50,
+          "iron_ingot": 20,
+          "limestone": 180,
+          "rune_of_power": 15,
+          "fish_glue": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 5",
+        "Población: 265 habitantes • Impuesto diario de plata: 38-77%"
+      ]
+    },
+    {
+      "level": 148,
+      "requirements": {
+        "materials": {
+          "tin_ingot": 4,
+          "leather": 30,
+          "pine_log": 250,
+          "forged_fasteners": 4
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 3",
+        "Población: 267 habitantes • Impuesto diario de plata: 39-77%"
+      ]
+    },
+    {
+      "level": 149,
+      "requirements": {
+        "materials": {
+          "iron_plate": 20,
+          "maple_plank": 10,
+          "bone_fastener": 60,
+          "stone_blocks": 40,
+          "soul_stone": 60
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 22 +1 slot",
+        "Población: 268 habitantes • Impuesto diario de plata: 39-78%"
+      ]
+    },
+    {
+      "level": 150,
+      "requirements": {
+        "materials": {
+          "alchemical_powder": 30,
+          "ghost_flower": 12,
+          "thick_fabric": 60,
+          "pliers": 60,
+          "sealing_wax": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 2",
+        "Población: 270 habitantes • Impuesto diario de plata: 39-78%"
+      ]
+    },
+    {
+      "level": 151,
+      "requirements": {
+        "materials": {
+          "iron_ingot": 50,
+          "planks": 60,
+          "pine_log": 250,
+          "fish_glue": 20,
+          "resin": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 4",
+        "Población: 272 habitantes • Impuesto diario de plata: 39-79%"
+      ]
+    },
+    {
+      "level": 152,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "maple_plank": 5,
+          "dragon_scale": 30,
+          "metal_parts": 30,
+          "gold_ore": 4
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 23 +1 slot",
+        "Población: 273 habitantes • Impuesto diario de plata: 40-79%"
+      ]
+    },
+    {
+      "level": 153,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "nails": 20,
+          "leather": 30,
+          "varnish": 20,
+          "tin_rod": 6
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 276 habitantes • Impuesto diario de plata: 40-80%"
+      ]
+    },
+    {
+      "level": 154,
+      "requirements": {
+        "materials": {
+          "chain": 30,
+          "fish_glue": 25,
+          "limestone": 180,
+          "copper_ingot": 5,
+          "metal_parts": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 2",
+        "Población: 278 habitantes • Impuesto diario de plata: 40-81%"
+      ]
+    },
+    {
+      "level": 155,
+      "requirements": {
+        "materials": {
+          "sulphur": 20,
+          "maple_plank": 4,
+          "rune_of_power": 20,
+          "nails": 40,
+          "soul_stone": 50
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 24 +1 slot",
+        "Población: 279 habitantes • Impuesto diario de plata: 40-81%"
+      ]
+    },
+    {
+      "level": 156,
+      "requirements": {
+        "materials": {
+          "tin_ingot": 4,
+          "leather": 30,
+          "pine_log": 250,
+          "forged_fasteners": 4,
+          "iron_ingot": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 5",
+        "Población: 281 habitantes • Impuesto diario de plata: 40-81%"
+      ]
+    },
+    {
+      "level": 157,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 12,
+          "maple_plank": 10,
+          "chain": 60,
+          "stone_blocks": 60,
+          "varnish": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 25 +1 slot",
+        "Población: 282 habitantes • Impuesto diario de plata: 41-82%"
+      ]
+    },
+    {
+      "level": 158,
+      "requirements": {
+        "materials": {
+          "alchemical_powder": 40,
+          "ghost_flower": 15,
+          "soul_stone": 80,
+          "pliers": 40,
+          "sealing_wax": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 2",
+        "Población: 284 habitantes • Impuesto diario de plata: 41-82%"
+      ]
+    },
+    {
+      "level": 159,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "maple_plank": 6,
+          "dragon_scale": 30,
+          "stone_blocks": 50,
+          "gold_ore": 4
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 26 +1 slot",
+        "Población: 285 habitantes • Impuesto diario de plata: 41-83%"
+      ]
+    },
+    {
+      "level": 160,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "stone_blocks": 60,
+          "leather": 40,
+          "forged_fasteners": 6
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 288 habitantes • Impuesto diario de plata: 42-84%"
+      ]
+    },
+    {
+      "level": 161,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 50,
+          "stone_blocks": 50,
+          "metal_parts": 40,
+          "tin_rod": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 4",
+        "Población: 290 habitantes • Impuesto diario de plata: 42-84%"
+      ]
+    },
+    {
+      "level": 162,
+      "requirements": {
+        "materials": {
+          "gold_ore": 4,
+          "soul_stone": 40,
+          "alchemical_powder": 30,
+          "ghost_flower": 12,
+          "sulphur": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Shaman lvl 4 (chance to find rare item in sanctums +2%)",
+        "Población: 291 habitantes • Impuesto diario de plata: 42-84%"
+      ]
+    },
+    {
+      "level": 163,
+      "requirements": {
+        "materials": {
+          "pine_log": 120,
+          "fish_glue": 25,
+          "resin": 40,
+          "pliers": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl 2",
+        "Población: 293 habitantes • Impuesto diario de plata: 42-85%"
+      ]
+    },
+    {
+      "level": 164,
+      "requirements": {
+        "materials": {
+          "forged_fasteners": 10,
+          "chain": 40,
+          "metal_parts": 40,
+          "thick_fabric": 30,
+          "bone_fastener": 40
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Training Camp lvl 5",
+        "Población: 295 habitantes • Impuesto diario de plata: 43-86%"
+      ]
+    },
+    {
+      "level": 165,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 6,
+          "maple_plank": 6,
+          "dragon_scale": 40,
+          "tin_rod": 8,
+          "soul_stone": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 27 +1 slot",
+        "Población: 296 habitantes • Impuesto diario de plata: 43-86%"
+      ]
+    },
+    {
+      "level": 166,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "stone_blocks": 60,
+          "iron_ingot": 20,
+          "fish_glue": 12,
+          "iron_plate": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 299 habitantes • Impuesto diario de plata: 43-87%"
+      ]
+    },
+    {
+      "level": 167,
+      "requirements": {
+        "materials": {
+          "chain": 40,
+          "leather": 30,
+          "stone_blocks": 180,
+          "copper_ingot": 20,
+          "rune_of_power": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 3",
+        "Población: 301 habitantes • Impuesto diario de plata: 44-87%"
+      ]
+    },
+    {
+      "level": 168,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 40,
+          "stone_blocks": 50,
+          "metal_parts": 25,
+          "tin_ingot": 5
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 5",
+        "Población: 303 habitantes • Impuesto diario de plata: 44-88%"
+      ]
+    },
+    {
+      "level": 169,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 15,
+          "maple_plank": 15,
+          "dragon_scale": 30,
+          "stone_blocks": 40,
+          "soul_crystal": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 28 +1 slot",
+        "Población: 304 habitantes • Impuesto diario de plata: 44-88%"
+      ]
+    },
+    {
+      "level": 170,
+      "requirements": {
+        "materials": {
+          "pine_log": 100,
+          "fish_glue": 30,
+          "resin": 30,
+          "pliers": 30,
+          "thick_fabric": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Greenery lvl. 2",
+        "Población: 306 habitantes • Impuesto diario de plata: 44-89%"
+      ]
+    },
+    {
+      "level": 171,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 12,
+          "maple_plank": 20,
+          "iron_ingot": 20,
+          "limestone": 180
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 4",
+        "Población: 308 habitantes • Impuesto diario de plata: 45-89%"
+      ]
+    },
+    {
+      "level": 172,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "bone_fastener": 40,
+          "limestone": 200,
+          "nails": 35,
+          "forged_fasteners": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortifications lvl 5",
+        "Población: 310 habitantes • Impuesto diario de plata: 45-90%"
+      ]
+    },
+    {
+      "level": 173,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "stone_blocks": 80,
+          "leather": 30,
+          "ghost_flower": 15,
+          "steel_plate": 2
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 313 habitantes • Impuesto diario de plata: 45-91%"
+      ]
+    },
+    {
+      "level": 174,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 16,
+          "maple_plank": 16,
+          "dragon_scale": 35,
+          "stone_blocks": 30,
+          "soul_stone": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 29 +1 slot",
+        "Población: 314 habitantes • Impuesto diario de plata: 46-91%"
+      ]
+    },
+    {
+      "level": 175,
+      "requirements": {
+        "materials": {
+          "planks": 80,
+          "stone_blocks": 60,
+          "leather": 30,
+          "fish_glue": 22,
+          "varnish": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "House lvl 3",
+        "Población: 317 habitantes • Impuesto diario de plata: 46-92%"
+      ]
+    },
+    {
+      "level": 176,
+      "requirements": {
+        "materials": {
+          "chain": 40,
+          "iron_ingot": 25,
+          "limestone": 180,
+          "copper_ingot": 25,
+          "nails": 30
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Gates lvl 5",
+        "Población: 319 habitantes • Impuesto diario de plata: 46-93%"
+      ]
+    },
+    {
+      "level": 177,
+      "requirements": {
+        "materials": {
+          "planks": 160,
+          "soul_stone": 60,
+          "alchemical_powder": 40,
+          "ghost_flower": 20,
+          "sulphur": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Shaman lvl 5 (chance to find rare item in sanctums +2%)",
+        "Población: 320 habitantes • Impuesto diario de plata: 46-93%"
+      ]
+    },
+    {
+      "level": 178,
+      "requirements": {
+        "materials": {
+          "rune_of_power": 20,
+          "gold_ore": 6,
+          "pliers": 20,
+          "varnish": 12,
+          "alchemical_powder": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Altar of Odin lvl 2 Grants you +100% mastery points with a sacrifice. Meaning weapons and armor you sacrifice to invest in class mastery points count as double now!!",
+        "Población: 321 habitantes • Impuesto diario de plata: 47-93%"
+      ]
+    },
+    {
+      "level": 179,
+      "requirements": {
+        "materials": {
+          "pine_log": 200,
+          "chain": 30,
+          "sealing_wax": 20,
+          "metal_parts": 20,
+          "forged_fasteners": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Fortification lvl 5",
+        "Población: 323 habitantes • Impuesto diario de plata: 47-94%"
+      ]
+    },
+    {
+      "level": 180,
+      "requirements": {
+        "materials": {
+          "planks": 60,
+          "resin": 40,
+          "bone_fastener": 40,
+          "leather": 30,
+          "steel_plate": 3
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Tax Collector lvl 5 (tax on district +3%)",
+        "Población: 324 habitantes • Impuesto diario de plata: 52-104%"
+      ]
+    },
+    {
+      "level": 181,
+      "requirements": {
+        "materials": {
+          "stone_blocks": 100,
+          "planks": 100,
+          "nails": 40,
+          "thick_fabric": 30,
+          "maple_plank": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "District Decorations lvl 3",
+        "Población: 326 habitantes • Impuesto diario de plata: 52-104%"
+      ]
+    },
+    {
+      "level": 182,
+      "requirements": {
+        "materials": {
+          "copper_ingot": 10,
+          "maple_plank": 10,
+          "dragon_scale": 20,
+          "forged_fasteners": 10,
+          "soul_stone": 15
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Bank lvl 30 +1 slot",
+        "Población: 327 habitantes • Impuesto diario de plata: 52-105%"
+      ]
+    },
+    {
+      "level": 183,
+      "requirements": {
+        "materials": {
+          "rune_of_power": 20,
+          "gold_ore": 7,
+          "pliers": 20,
+          "varnish": 12,
+          "alchemical_powder": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Repair Table lvl 1 (Your own repair table in your district.)",
+        "Población: 327 habitantes • Impuesto diario de plata: 52-105%"
+      ]
+    },
+    {
+      "level": 184,
+      "requirements": {
+        "materials": {
+          "forged_fasteners": 15,
+          "metal_parts": 20,
+          "sealing_wax": 12,
+          "nails": 20,
+          "sulphur": 10
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Open the district lvl 1 (open to other players, and collect taxes from them.)",
+        "Población: 332 habitantes • Impuesto diario de plata: 63-126%"
+      ]
+    },
+    {
+      "level": 185,
+      "requirements": {
+        "materials": {
+          "maple_plank": 20,
+          "ebonite_ingot": 20
+        },
+        "influencePoints": 0
+      },
+      "unlocks": [
+        "Shipyard lvl 1 (currently not attainable)"
+      ]
+    }
+  ]
+}
