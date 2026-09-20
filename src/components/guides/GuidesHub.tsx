@@ -15,6 +15,7 @@ import {
   Check,
   RotateCcw
 } from 'lucide-react';
+import { ItemIcon } from '../common/ItemIcon';
 
 const guidesData = guidesDataRaw.guides as GuideSection[];
 const classesData = classesDataRaw.classes as ClassData[];
@@ -187,7 +188,7 @@ export const GuidesHub: React.FC = () => {
               : 'text-nordic-muted hover:text-nordic-text hover:bg-nordic-card'
           }`}
         >
-          <span>🎖️</span>
+          <ItemIcon id="influencePoints" fallbackEmoji="🎖️" name="Distrito e Influencia" size="sm" />
           <span>Distrito & Influencia</span>
         </button>
       </div>
@@ -215,6 +216,7 @@ export const GuidesHub: React.FC = () => {
                       {guide.category === 'sanctum' && <Zap className="w-5 h-5" />}
                       {guide.category === 'tombs' && <Skull className="w-5 h-5" />}
                       {guide.category === 'pvp' && <Sword className="w-5 h-5" />}
+                      {guide.category === 'district' && <ItemIcon id="influencePoints" fallbackEmoji="🎖️" name="Distrito" size="sm" />}
                       {['graveyard', 'den', 'forge'].includes(guide.category) && <Shield className="w-5 h-5" />}
                     </div>
                     <div>

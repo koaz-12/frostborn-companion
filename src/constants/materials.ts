@@ -55,6 +55,7 @@ export const KNOWN_MATERIALS: Record<string, MaterialMeta> = {
   boat_figurehead: { id: 'boat_figurehead', name: 'Mascarón de Proa', category: 'rare', icon: '🐉', source: 'Tesoro de la Costa y Muelle de Drakkars' },
   helm: { id: 'helm', name: 'Timón', category: 'special', icon: '☸️', source: 'Naufragios y Evento del Barco Hundido' },
   influencePoints: { id: 'influencePoints', name: 'Puntos de Influencia', category: 'special', icon: '🎖️', source: 'Completando Tareas Diarias, Ofrendas y Odín' },
+  mastery_points: { id: 'mastery_points', name: 'Puntos de Maestría', category: 'special', icon: '🔥', source: 'Sacrificando Armas y Armaduras en el Altar de Odín' },
   gunpowder: { id: 'gunpowder', name: 'Pólvora', category: 'rare', icon: '🧨', source: 'Mesa de Alquimia (Azufre + Carbón vegetal)' },
   bomb: { id: 'bomb', name: 'Bomba de Pólvora', category: 'rare', icon: '💣', source: 'Banco de Trabajo (5 Pólvora, 5 Placas, 5 Cuerdas, 1 Sujeción)' },
   lockpick: { id: 'lockpick', name: 'Ganzúa Simple', category: 'metal', icon: '🗝️', source: 'Mesa de Armero (Piezas de metal + Clavos)' },

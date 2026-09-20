@@ -813,7 +813,9 @@ export const DistrictCalculator: React.FC = () => {
                   }`}>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2.5">
-                        <span className="text-2xl p-1.5 rounded-lg bg-nordic-card/90 border border-nordic-border/60">🎖️</span>
+                        <span className="p-1.5 rounded-lg bg-nordic-card/90 border border-nordic-border/60 flex items-center justify-center">
+                          <ItemIcon id="influencePoints" fallbackEmoji="🎖️" name="Puntos de Influencia" size="md" />
+                        </span>
                         <div>
                           <div className="flex items-center gap-1.5">
                             <span className="text-xs font-bold text-nordic-text block">Puntos de Influencia</span>
@@ -1049,7 +1051,7 @@ export const DistrictCalculator: React.FC = () => {
                             ? 'bg-nordic-card/40 text-nordic-muted line-through border-nordic-border/30 opacity-70'
                             : 'bg-nordic-card text-nordic-ice border-nordic-border'
                         }`}>
-                          <span>🎖️</span>
+                          <ItemIcon id="influencePoints" fallbackEmoji="🎖️" name="Puntos de Influencia" size="sm" />
                           <span>Influencia: {lvlData.requirements.influencePoints.toLocaleString()}</span>
                         </span>
                       )}
@@ -1622,7 +1624,7 @@ export const DistrictCalculator: React.FC = () => {
           <div className="bg-nordic-surface border-2 border-nordic-gold/60 rounded-2xl max-w-xl w-full p-6 shadow-2xl relative space-y-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-nordic-border">
               <div className="flex items-center gap-2.5">
-                <span className="text-2xl">🎖️</span>
+                <ItemIcon id="influencePoints" fallbackEmoji="🎖️" name="Puntos de Influencia" size="md" />
                 <div>
                   <h3 className="text-lg font-runic font-bold text-nordic-text">
                     ¿Cómo Conseguir Puntos de Influencia?

@@ -8,6 +8,7 @@ import itemsDataRaw from '../../data/items.json';
 import classesDataRaw from '../../data/classes.json';
 import { ItemDonation, ClassData, ClassBase, Rarity } from '../../types';
 import { KNOWN_MATERIALS, RARITY_COLORS } from '../../constants/materials';
+import { ItemIcon } from '../common/ItemIcon';
 import {
   Flame,
   Search,
@@ -202,8 +203,9 @@ export const AltarCalculator: React.FC = () => {
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span className="font-bold text-xs text-nordic-text">Nivel {lvl.level}</span>
-                        <span className="font-mono text-[11px] text-nordic-gold font-bold">
-                          {lvl.requiredPoints.toLocaleString()} pts
+                        <span className="font-mono text-[11px] text-nordic-gold font-bold flex items-center gap-1">
+                          <ItemIcon id="mastery_points" fallbackEmoji="🔥" size="sm" />
+                          <span>{lvl.requiredPoints.toLocaleString()} pts</span>
                         </span>
                       </div>
                       <span className="text-[10px] text-nordic-muted block truncate mb-1.5">
@@ -221,8 +223,9 @@ export const AltarCalculator: React.FC = () => {
             {/* Input Manual de Puntos & Slider de Durabilidad */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t border-nordic-border">
               <div>
-                <label className="block text-xs font-semibold text-nordic-muted uppercase tracking-wider mb-2">
-                  Puntos de Maestría Requeridos (Personalizado)
+                <label className="text-xs font-semibold text-nordic-muted uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <ItemIcon id="mastery_points" fallbackEmoji="🔥" name="Puntos de Maestría" size="sm" />
+                  <span>Puntos de Maestría Requeridos (Personalizado)</span>
                 </label>
                 <div className="flex items-center gap-2">
                   <input
@@ -294,8 +297,9 @@ export const AltarCalculator: React.FC = () => {
               <span className="text-xs uppercase tracking-wider text-nordic-muted font-semibold">
                 Opciones Recomendadas ({recommendedPlans.length})
               </span>
-              <span className="text-xs text-nordic-gold font-medium">
-                Meta: {altarTargetPoints.toLocaleString()} puntos
+              <span className="text-xs text-nordic-gold font-medium flex items-center gap-1.5">
+                <ItemIcon id="mastery_points" fallbackEmoji="🔥" name="Puntos de Maestría" size="sm" />
+                <span>Meta: {altarTargetPoints.toLocaleString()} puntos</span>
               </span>
             </div>
 
@@ -320,8 +324,8 @@ export const AltarCalculator: React.FC = () => {
                       {/* Header del ítem */}
                       <div className="flex items-start justify-between gap-3 mb-3">
                         <div className="flex items-center gap-3">
-                          <span className="text-3xl p-2 rounded-xl bg-nordic-card border border-nordic-border">
-                            {plan.item.icon || '⚔️'}
+                          <span className="p-2 rounded-xl bg-nordic-card border border-nordic-border flex items-center justify-center min-w-[48px] min-h-[48px]">
+                            <ItemIcon id={plan.item.id} fallbackEmoji={plan.item.icon || '⚔️'} name={plan.item.name} size="md" />
                           </span>
                           <div>
                             <div className="flex items-center gap-2">
@@ -384,7 +388,7 @@ export const AltarCalculator: React.FC = () => {
                                 key={matId}
                                 className="px-2 py-1 rounded-md bg-nordic-surface border border-nordic-border text-xs font-mono text-nordic-text flex items-center gap-1.5"
                               >
-                                <span>{icon}</span>
+                                <ItemIcon id={matId} fallbackEmoji={icon} name={name} size="sm" />
                                 <span>{name}:</span>
                                 <strong className="text-nordic-gold">{qty.toLocaleString()}</strong>
                               </span>
@@ -409,8 +413,9 @@ export const AltarCalculator: React.FC = () => {
           {/* Resumen Superior */}
           <div className="bg-nordic-surface rounded-2xl border border-nordic-border p-5 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span className="text-xs text-nordic-muted uppercase font-semibold tracking-wider">
-                Total de Puntos de Maestría Obtenidos
+              <span className="text-xs text-nordic-muted uppercase font-semibold tracking-wider flex items-center gap-1.5">
+                <ItemIcon id="mastery_points" fallbackEmoji="🔥" name="Puntos de Maestría" size="sm" />
+                <span>Total de Puntos de Maestría Obtenidos</span>
               </span>
               <div className="flex items-baseline gap-2 mt-1">
                 <span className="font-runic font-bold text-3xl text-nordic-gold">
@@ -496,15 +501,16 @@ export const AltarCalculator: React.FC = () => {
                   className="bg-nordic-surface rounded-xl border border-nordic-border p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl p-2 rounded-lg bg-nordic-card border border-nordic-border">
-                      {item.icon || '⚔️'}
+                    <span className="p-1.5 rounded-lg bg-nordic-card border border-nordic-border flex items-center justify-center min-w-[40px] min-h-[40px]">
+                      <ItemIcon id={item.id} fallbackEmoji={item.icon || '⚔️'} name={item.name} size="md" />
                     </span>
                     <div>
                       <h4 className="font-semibold text-sm text-nordic-text">
                         {item.name}
                       </h4>
-                      <span className="text-xs text-nordic-muted font-mono">
-                        {entryTotalPoints} pts ({unitPoints} pts × {entry.quantity} un.)
+                      <span className="text-xs text-nordic-muted font-mono flex items-center gap-1">
+                        <ItemIcon id="mastery_points" fallbackEmoji="🔥" size="sm" />
+                        <span>{entryTotalPoints} pts ({unitPoints} pts × {entry.quantity} un.)</span>
                       </span>
                     </div>
                   </div>
@@ -614,8 +620,8 @@ export const AltarCalculator: React.FC = () => {
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex items-center gap-3">
-                      <span className="text-3xl p-2 bg-nordic-card rounded-xl border border-nordic-border">
-                        {item.icon || '⚔️'}
+                      <span className="p-1.5 bg-nordic-card rounded-xl border border-nordic-border flex items-center justify-center min-w-[44px] min-h-[44px]">
+                        <ItemIcon id={item.id} fallbackEmoji={item.icon || '⚔️'} name={item.name} size="md" />
                       </span>
                       <div>
                         <h4 className="font-bold text-sm text-nordic-text">{item.name}</h4>
@@ -626,8 +632,9 @@ export const AltarCalculator: React.FC = () => {
                     </div>
 
                     <div className="text-right">
-                      <span className="font-runic font-bold text-base text-nordic-gold block">
-                        {item.masteryPoints} pts
+                      <span className="font-runic font-bold text-base text-nordic-gold flex items-center justify-end gap-1">
+                        <ItemIcon id="mastery_points" fallbackEmoji="🔥" size="sm" />
+                        <span>{item.masteryPoints} pts</span>
                       </span>
                       <span className="text-[10px] text-nordic-muted">
                         Dur: {item.maxDurability}
@@ -648,9 +655,10 @@ export const AltarCalculator: React.FC = () => {
                         return (
                           <span
                             key={mId}
-                            className="text-[11px] font-mono text-nordic-muted bg-nordic-card px-2 py-0.5 rounded border border-nordic-border"
+                            className="text-[11px] font-mono text-nordic-muted bg-nordic-card px-2 py-0.5 rounded border border-nordic-border flex items-center gap-1"
                           >
-                            {meta ? meta.name : mId}: {qty}
+                            <ItemIcon id={mId} fallbackEmoji={meta ? meta.icon : '📦'} name={meta ? meta.name : mId} size="sm" />
+                            <span>{meta ? meta.name : mId}: {qty}</span>
                           </span>
                         );
                       })}

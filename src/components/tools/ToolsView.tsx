@@ -216,7 +216,7 @@ export const ToolsView: React.FC = () => {
                   Almacén Offline & Sprites de Recursos
                 </h3>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-500/40 font-bold">
-                  58 / 58 Guardados
+                  {Object.values(KNOWN_MATERIALS).length} / {Object.values(KNOWN_MATERIALS).length} Guardados
                 </span>
               </div>
               <p className="text-xs text-nordic-muted">
