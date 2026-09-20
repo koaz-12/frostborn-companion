@@ -620,6 +620,52 @@ export const DistrictCalculator: React.FC = () => {
                           />
                         </div>
                       </div>
+
+                      {/* Control interactivo para ajustar existencias de este material */}
+                      <div className="pt-2 border-t border-nordic-border/50 flex items-center justify-between gap-1.5">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[10px] text-nordic-muted">Tengo:</span>
+                          <input
+                            type="number"
+                            min="0"
+                            value={owned === 0 ? '' : owned}
+                            placeholder="0"
+                            onChange={(e) => {
+                              const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
+                              setMaterialCount(mId, val);
+                            }}
+                            className="w-16 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none"
+                            aria-label={`Existencias de ${name}`}
+                          />
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={() => setMaterialCount(mId, owned + 10)}
+                            className="px-1.5 py-0.5 bg-nordic-card hover:bg-nordic-border border border-nordic-border rounded text-[10px] font-mono text-nordic-muted hover:text-nordic-gold transition-colors"
+                            title="Sumar +10"
+                          >
+                            +10
+                          </button>
+                          <button
+                            onClick={() => setMaterialCount(mId, owned + 50)}
+                            className="px-1.5 py-0.5 bg-nordic-card hover:bg-nordic-border border border-nordic-border rounded text-[10px] font-mono text-nordic-muted hover:text-nordic-gold transition-colors"
+                            title="Sumar +50"
+                          >
+                            +50
+                          </button>
+                          <button
+                            onClick={() => setMaterialCount(mId, qty)}
+                            className={`px-1.5 py-0.5 border rounded text-[10px] font-mono font-bold transition-all ${
+                              isReady
+                                ? 'bg-emerald-950/60 border-emerald-600/70 text-emerald-300'
+                                : 'bg-nordic-gold/15 border-nordic-gold/40 text-nordic-gold'
+                            }`}
+                            title="Llenar cantidad exacta para este nivel"
+                          >
+                            Nivel
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   );
                 })}
@@ -675,6 +721,41 @@ export const DistrictCalculator: React.FC = () => {
                             width: `${Math.min(100, ((inventory['influencePoints'] || 0) / currentInspectedData.requirements.influencePoints) * 100)}%`
                           }}
                         />
+                      </div>
+                    </div>
+
+                    {/* Control interactivo para ajustar influencia */}
+                    <div className="pt-2 border-t border-nordic-border/50 flex items-center justify-between gap-1.5">
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] text-nordic-muted">Tengo:</span>
+                        <input
+                          type="number"
+                          min="0"
+                          value={(inventory['influencePoints'] || 0) === 0 ? '' : inventory['influencePoints']}
+                          placeholder="0"
+                          onChange={(e) => {
+                            const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
+                            setMaterialCount('influencePoints', val);
+                          }}
+                          className="w-20 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none"
+                          aria-label="Puntos de influencia"
+                        />
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => setMaterialCount('influencePoints', (inventory['influencePoints'] || 0) + 100)}
+                          className="px-1.5 py-0.5 bg-nordic-card hover:bg-nordic-border border border-nordic-border rounded text-[10px] font-mono text-nordic-muted hover:text-nordic-ice transition-colors"
+                          title="Sumar +100 pts"
+                        >
+                          +100
+                        </button>
+                        <button
+                          onClick={() => setMaterialCount('influencePoints', currentInspectedData.requirements.influencePoints)}
+                          className="px-1.5 py-0.5 bg-nordic-card hover:bg-nordic-border border border-nordic-border rounded text-[10px] font-mono text-nordic-ice font-bold transition-colors"
+                          title="Llenar cantidad exacta para este nivel"
+                        >
+                          Nivel
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -847,83 +928,175 @@ export const DistrictCalculator: React.FC = () => {
       )}
 
       {/* ========================================================================= */}
-      {/* SUBTAB 1: SHOPPING & FARMING LIST (TOTAL ACUMULADO)                        */}
+      {/* SUBTAB 1: SHOPPING & FARMING LIST (TOTAL ACUMULADO CON ENTRADA DIRECTA)    */}
       {/* ========================================================================= */}
       {activeSubTab === 'shopping' && (
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <span className="text-xs uppercase tracking-wider text-nordic-muted font-semibold">
-              Desglose Total Acumulado para los {costResult.levelsIncluded.length} Niveles
-            </span>
-            <div className="flex items-center gap-2">
+            <div>
+              <span className="text-xs uppercase tracking-wider text-nordic-muted font-semibold block">
+                Desglose Total Acumulado ({costResult.levelsIncluded.length} Niveles de Construcción)
+              </span>
+              <p className="text-xs text-nordic-muted">
+                Ingresa aquí mismo las cantidades que tienes en tus cofres para ver lo que te falta en tiempo real.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={copyMissingList}
-                className="px-3 py-1.5 rounded-lg bg-nordic-card hover:bg-nordic-border/60 border border-nordic-border text-xs font-medium text-nordic-text flex items-center gap-1.5 transition-colors"
+                className="px-3 py-1.5 rounded-lg bg-nordic-card hover:bg-nordic-border/60 border border-nordic-border text-xs font-medium text-nordic-text flex items-center gap-1.5 transition-colors shadow-sm"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-nordic-gold" />}
                 <span>{copied ? '¡Copiado!' : 'Copiar lista de compras'}</span>
               </button>
               <button
                 onClick={fillInventoryToTarget}
-                className="px-3 py-1.5 rounded-lg bg-nordic-gold/15 hover:bg-nordic-gold/25 border border-nordic-gold/40 text-xs font-medium text-nordic-gold transition-colors"
+                className="px-3 py-1.5 rounded-lg bg-nordic-gold/15 hover:bg-nordic-gold/25 border border-nordic-gold/40 text-xs font-medium text-nordic-gold transition-colors shadow-sm"
               >
                 Marcar todo como obtenido
+              </button>
+              <button
+                onClick={resetInventory}
+                className="px-3 py-1.5 rounded-lg bg-nordic-card hover:bg-nordic-border border border-nordic-border text-xs text-nordic-muted hover:text-rose-400 flex items-center gap-1.5 transition-colors shadow-sm"
+                title="Vaciar todo el inventario a 0"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>Vaciar todo</span>
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
             {progressResult.breakdown.map((item) => {
               const meta = KNOWN_MATERIALS[item.materialId];
-              const name = meta ? meta.name : item.materialId;
-              const icon = meta ? meta.icon : '📦';
+              const name = meta ? meta.name : (item.materialId === 'influencePoints' ? 'Puntos de Influencia' : item.materialId);
+              const icon = meta ? meta.icon : (item.materialId === 'influencePoints' ? '🎖️' : '📦');
               const isDone = item.missing === 0;
+              const stepBig = item.required >= 500 ? 200 : 100;
 
               return (
                 <div
                   key={item.materialId}
-                  className={`rounded-xl border p-3.5 transition-all ${
+                  className={`rounded-xl border p-4 transition-all space-y-3 shadow-sm ${
                     isDone
-                      ? 'bg-emerald-950/20 border-emerald-800/40'
-                      : 'bg-nordic-surface border-nordic-border hover:border-nordic-border/80'
+                      ? 'bg-gradient-to-br from-emerald-950/30 via-nordic-surface to-nordic-card border-emerald-700/60'
+                      : 'bg-gradient-to-br from-nordic-surface via-nordic-card to-nordic-surface border-nordic-border hover:border-nordic-gold/50'
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-2xl">{icon}</span>
+                  {/* Cabecera del material con icono y estado */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl p-2 rounded-xl bg-nordic-card/90 border border-nordic-border/60 shadow-sm">
+                        {icon}
+                      </span>
                       <div>
-                        <span className="text-sm font-semibold text-nordic-text block">
-                          {name}
-                        </span>
-                        <span className="text-[11px] text-nordic-muted">
-                          Tengo: <strong className="text-nordic-text">{item.owned.toLocaleString()}</strong> / Requiere: {item.required.toLocaleString()}
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-bold text-nordic-text block">
+                            {name}
+                          </span>
+                          {meta?.category && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-nordic-card text-nordic-muted border border-nordic-border uppercase font-mono">
+                              {meta.category}
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs text-nordic-muted">
+                          Pide: <strong className="text-nordic-gold font-mono font-bold">{item.required.toLocaleString()}</strong> un.
                         </span>
                       </div>
                     </div>
 
-                    <div className="text-right">
+                    <div className="text-right flex flex-col items-end">
                       {isDone ? (
-                        <span className="px-2 py-0.5 rounded-md bg-emerald-900/40 text-emerald-400 text-xs font-medium border border-emerald-700/50">
-                          Completo
+                        <span className="px-2.5 py-0.5 rounded-full bg-emerald-900/60 text-emerald-300 font-bold text-xs border border-emerald-600/70 flex items-center gap-1 shadow-sm">
+                          <Check className="w-3.5 h-3.5 text-emerald-400" /> ¡Completo!
                         </span>
                       ) : (
-                        <span className="text-xs font-mono font-semibold text-nordic-blood">
+                        <span className="text-xs font-mono font-bold text-rose-400">
                           Faltan -{item.missing.toLocaleString()}
                         </span>
                       )}
-                      <span className="block text-[10px] text-nordic-muted font-mono mt-0.5">
+                      <span className="text-[11px] font-mono font-bold text-nordic-gold mt-0.5">
                         {item.percent}%
                       </span>
                     </div>
                   </div>
 
-                  <div className="w-full bg-nordic-card rounded-full h-2 overflow-hidden border border-nordic-border/60">
+                  {/* Barra de progreso visual */}
+                  <div className="w-full bg-nordic-card/90 rounded-full h-2 overflow-hidden border border-nordic-border/60">
                     <div
                       className={`h-full rounded-full transition-all duration-300 ${
-                        isDone ? 'bg-emerald-500' : 'bg-nordic-gold'
+                        isDone
+                          ? 'bg-gradient-to-r from-emerald-500 to-emerald-400'
+                          : 'bg-gradient-to-r from-nordic-gold-dark to-nordic-gold-light'
                       }`}
                       style={{ width: `${item.percent}%` }}
                     />
+                  </div>
+
+                  {/* Fila interactiva para ingresar lo que tengo en cofres */}
+                  <div className="bg-nordic-card/70 p-2.5 rounded-xl border border-nordic-border/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                    <div className="flex items-center gap-2">
+                      <label className="text-xs font-semibold text-nordic-muted whitespace-nowrap">
+                        Tengo en cofres:
+                      </label>
+                      <input
+                        type="number"
+                        min="0"
+                        value={item.owned === 0 ? '' : item.owned}
+                        placeholder="0"
+                        onChange={(e) => {
+                          const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
+                          setMaterialCount(item.materialId, val);
+                        }}
+                        aria-label={`Cantidad que tengo de ${name}`}
+                        className="w-24 bg-nordic-surface border border-nordic-border focus:border-nordic-gold rounded-lg px-2.5 py-1 text-sm font-mono font-bold text-nordic-text text-center focus:outline-none transition-colors"
+                      />
+                    </div>
+
+                    <div className="flex items-center gap-1 self-end sm:self-center">
+                      <button
+                        onClick={() => setMaterialCount(item.materialId, item.owned + 10)}
+                        className="px-2 py-1 bg-nordic-surface hover:bg-nordic-border border border-nordic-border rounded-lg text-xs font-mono text-nordic-muted hover:text-nordic-gold transition-colors"
+                        title="Sumar +10"
+                      >
+                        +10
+                      </button>
+                      <button
+                        onClick={() => setMaterialCount(item.materialId, item.owned + 50)}
+                        className="px-2 py-1 bg-nordic-surface hover:bg-nordic-border border border-nordic-border rounded-lg text-xs font-mono text-nordic-muted hover:text-nordic-gold transition-colors"
+                        title="Sumar +50"
+                      >
+                        +50
+                      </button>
+                      <button
+                        onClick={() => setMaterialCount(item.materialId, item.owned + stepBig)}
+                        className="px-2 py-1 bg-nordic-surface hover:bg-nordic-border border border-nordic-border rounded-lg text-xs font-mono text-nordic-muted hover:text-nordic-gold transition-colors"
+                        title={`Sumar +${stepBig}`}
+                      >
+                        +{stepBig}
+                      </button>
+                      <button
+                        onClick={() => setMaterialCount(item.materialId, item.required)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition-all border ${
+                          isDone
+                            ? 'bg-emerald-950/70 border-emerald-600/70 text-emerald-300'
+                            : 'bg-nordic-gold/15 hover:bg-nordic-gold/30 border-nordic-gold/40 text-nordic-gold'
+                        }`}
+                        title="Completar todo lo requerido"
+                      >
+                        Max
+                      </button>
+                      {item.owned > 0 && (
+                        <button
+                          onClick={() => setMaterialCount(item.materialId, 0)}
+                          className="p-1 hover:bg-nordic-border text-nordic-muted hover:text-rose-400 rounded-lg text-xs transition-colors"
+                          title="Vaciar este material a 0"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               );
