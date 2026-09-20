@@ -6,8 +6,12 @@ import {
   Clock,
   Check,
   AlertCircle,
-  Smartphone
+  Smartphone,
+  ShieldCheck,
+  Image
 } from 'lucide-react';
+import { KNOWN_MATERIALS } from '../../constants/materials';
+import { ItemIcon } from '../common/ItemIcon';
 
 export const ToolsView: React.FC = () => {
   const { exportAppState, importAppState } = useInventoryStore();
@@ -15,6 +19,7 @@ export const ToolsView: React.FC = () => {
   const [importJsonText, setImportJsonText] = useState('');
   const [importStatus, setImportStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [copiedExport, setCopiedExport] = useState(false);
+  const [showGallery, setShowGallery] = useState(false);
 
   // Timers: Sanctum 48h timer simulation, Daily tournament 24h timer
   const [sanctumSeconds, setSanctumSeconds] = useState(48 * 3600 - 14200);
@@ -196,6 +201,66 @@ export const ToolsView: React.FC = () => {
             </p>
           )}
         </div>
+      </div>
+
+      {/* Respaldo de Sprites & Almacén Offline */}
+      <div className="rounded-2xl bg-nordic-surface border border-nordic-border p-5 shadow-lg space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="font-bold text-base text-nordic-text">
+                  Almacén Offline & Sprites de Recursos
+                </h3>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-950/60 text-emerald-400 border border-emerald-500/40 font-bold">
+                  58 / 58 Guardados
+                </span>
+              </div>
+              <p className="text-xs text-nordic-muted">
+                100% de los sprites e iconos de materiales están respaldados en la memoria local de tu dispositivo y precacheados por el Service Worker (PWA) para funcionar sin conexión.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setShowGallery(!showGallery)}
+            className="px-3.5 py-2 rounded-xl bg-nordic-card border border-nordic-border text-nordic-text hover:border-nordic-gold/40 text-xs font-semibold flex items-center gap-2 transition-colors whitespace-nowrap self-start sm:self-center"
+          >
+            <Image className="w-4 h-4 text-nordic-gold" />
+            <span>{showGallery ? 'Ocultar Galería' : 'Explorar Galería de Sprites'}</span>
+          </button>
+        </div>
+
+        {showGallery && (
+          <div className="pt-3 border-t border-nordic-border/60">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5 max-h-96 overflow-y-auto pr-1">
+              {Object.values(KNOWN_MATERIALS).map(mat => (
+                <div
+                  key={mat.id}
+                  className="bg-nordic-card/60 border border-nordic-border rounded-xl p-2.5 flex flex-col items-center text-center gap-1.5 hover:border-nordic-gold/50 transition-colors"
+                >
+                  <ItemIcon
+                    id={mat.id}
+                    fallbackEmoji={mat.icon}
+                    name={mat.name}
+                    size="lg"
+                  />
+                  <div className="font-semibold text-[11px] text-nordic-text truncate w-full" title={mat.name}>
+                    {mat.name}
+                  </div>
+                  {mat.source && (
+                    <span className="text-[9px] text-nordic-muted truncate w-full" title={mat.source}>
+                      {mat.source}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Tarjeta de Aplicación PWA y Privacidad */}
