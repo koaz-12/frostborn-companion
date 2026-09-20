@@ -97,4 +97,6 @@ export interface MaterialMeta {
   name: string;
   category: 'wood' | 'stone' | 'metal' | 'cloth' | 'rare' | 'special';
   icon: string;
+  source?: string;
 }
+

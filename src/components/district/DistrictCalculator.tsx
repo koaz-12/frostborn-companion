@@ -4,6 +4,7 @@ import { calculateDistrictCost, calculateInventoryProgress } from '../../lib/cal
 import districtsDataRaw from '../../data/districts.json';
 import { KNOWN_MATERIALS } from '../../constants/materials';
 import { DistrictLevel } from '../../types';
+import { ItemIcon } from '../common/ItemIcon';
 import {
   Sparkles,
   CheckCircle2,
@@ -18,7 +19,10 @@ import {
   CheckCircle,
   HelpCircle,
   X,
-  Ticket
+  Ticket,
+  Search,
+  Share2,
+  MapPin
 } from 'lucide-react';
 
 const districtsData = (districtsDataRaw.levels as unknown) as DistrictLevel[];
@@ -39,6 +43,9 @@ export const DistrictCalculator: React.FC = () => {
 
   const [activeSubTab, setActiveSubTab] = useState<'shopping' | 'stepByStep' | 'inventory' | 'unlocks'>('stepByStep');
   const [copied, setCopied] = useState(false);
+  const [clanCopied, setClanCopied] = useState(false);
+  const [materialSearch, setMaterialSearch] = useState('');
+  const [materialCategory, setMaterialCategory] = useState<'all' | 'wood' | 'stone' | 'metal' | 'cloth' | 'rare'>('all');
   const [unlockFilter, setUnlockFilter] = useState<'all' | 'milestones' | 'doors'>('milestones');
   const [inspectedLevel, setInspectedLevel] = useState<number>(districtCurrentLevel + 1);
   const [showInfluenceModal, setShowInfluenceModal] = useState(false);
@@ -140,6 +147,43 @@ export const DistrictCalculator: React.FC = () => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  // Set target to only next level (+1)
+  const setNextLevelOnly = () => {
+    const next = Math.min(maxAvailableLevel, districtCurrentLevel + 1);
+    handleTargetChange(next);
+  };
+
+  // Copy Clan-formatted message for WhatsApp / Discord
+  const copyClanList = () => {
+    const missing = progressResult.breakdown.filter((item) => item.missing > 0);
+    if (missing.length === 0) {
+      navigator.clipboard.writeText(`🛡️ ¡Todo listo para Distrito ${districtCurrentLevel} ➔ ${districtTargetLevel}! No falta ningún recurso en cofres.`);
+      setClanCopied(true);
+      setTimeout(() => setClanCopied(false), 2500);
+      return;
+    }
+
+    const lines = missing.map((item) => {
+      const meta = KNOWN_MATERIALS[item.materialId];
+      const name = meta ? meta.name : item.materialId;
+      return `• ${name}: ${item.missing.toLocaleString()} un.`;
+    });
+
+    const clanMsg = [
+      `⚔️ [FROSTBORN] META DE DISTRITO: Nivel ${districtCurrentLevel} ➔ ${districtTargetLevel} ⚔️`,
+      `Progreso actual: ${progressResult.overallPercent}%`,
+      `----------------------------------------`,
+      `📦 Recursos que faltan conseguir en cofres:`,
+      ...lines,
+      `----------------------------------------`,
+      `¡A farmear, familia nórdica! 🛡️🌲`
+    ].join('\n');
+
+    navigator.clipboard.writeText(clanMsg);
+    setClanCopied(true);
+    setTimeout(() => setClanCopied(false), 2500);
   };
 
   // Fill inventory to complete all requirements
@@ -309,7 +353,16 @@ export const DistrictCalculator: React.FC = () => {
             <label className="text-xs font-semibold uppercase tracking-wider text-nordic-muted">
               Nivel Objetivo a Alcanzar
             </label>
-            <span className="text-xs font-mono text-nordic-gold-light">{districtCurrentLevel + 1} - 184</span>
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={setNextLevelOnly}
+                className="px-2 py-0.5 rounded bg-nordic-gold/15 hover:bg-nordic-gold/25 border border-nordic-gold/30 text-[10px] font-bold text-nordic-gold transition-colors"
+                title="Configurar objetivo exactamente al nivel siguiente"
+              >
+                🎯 +1 Siguiente
+              </button>
+              <span className="text-xs font-mono text-nordic-gold-light">{districtCurrentLevel + 1} - 184</span>
+            </div>
           </div>
 
           <div className="flex items-center gap-2">
@@ -655,12 +708,20 @@ export const DistrictCalculator: React.FC = () => {
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2.5">
-                          <span className="text-2xl p-1.5 rounded-lg bg-nordic-card/90 border border-nordic-border/60">{icon}</span>
+                          <span className="p-1.5 rounded-lg bg-nordic-card/90 border border-nordic-border/60 flex items-center justify-center min-w-[36px] min-h-[36px]">
+                            <ItemIcon id={mId} fallbackEmoji={icon} name={name} size="sm" />
+                          </span>
                           <div>
                             <span className="text-xs font-bold text-nordic-text block tracking-wide">{name}</span>
                             <span className="text-[11px] text-nordic-muted">
                               Pide: <strong className="text-nordic-gold font-mono">{qty.toLocaleString()}</strong> un.
                             </span>
+                            {meta?.source && (
+                              <div className="text-[10px] text-nordic-muted/80 flex items-center gap-1 mt-0.5" title="Dónde conseguir este recurso">
+                                <MapPin className="w-2.5 h-2.5 text-nordic-gold/70 flex-shrink-0" />
+                                <span className="truncate max-w-[150px]">{meta.source}</span>
+                              </div>
+                            )}
                           </div>
                         </div>
 
@@ -1017,6 +1078,14 @@ export const DistrictCalculator: React.FC = () => {
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <button
+                onClick={copyClanList}
+                className="px-3 py-1.5 rounded-lg bg-nordic-card hover:bg-nordic-border/60 border border-nordic-border text-xs font-medium text-emerald-300 hover:text-emerald-200 flex items-center gap-1.5 transition-colors shadow-sm"
+                title="Copiar lista formateada para el chat de WhatsApp o Discord de tu clan"
+              >
+                {clanCopied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5 text-emerald-400" />}
+                <span>{clanCopied ? '¡Copiado para Clan!' : 'Copiar para Clan'}</span>
+              </button>
+              <button
                 onClick={copyMissingList}
                 className="px-3 py-1.5 rounded-lg bg-nordic-card hover:bg-nordic-border/60 border border-nordic-border text-xs font-medium text-nordic-text flex items-center gap-1.5 transition-colors shadow-sm"
               >
@@ -1040,61 +1109,159 @@ export const DistrictCalculator: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-            {progressResult.breakdown.map((item) => {
-              const meta = KNOWN_MATERIALS[item.materialId];
-              const name = meta ? meta.name : (item.materialId === 'influencePoints' ? 'Puntos de Influencia' : item.materialId);
-              const icon = meta ? meta.icon : (item.materialId === 'influencePoints' ? '🎖️' : '📦');
-              const isDone = item.missing === 0;
-              const stepBig = item.required >= 500 ? 200 : 100;
+          {/* Barra de Búsqueda y Filtros por Categoría */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 bg-nordic-card/60 p-3 rounded-xl border border-nordic-border/60">
+            {/* Buscador en tiempo real */}
+            <div className="relative flex-1">
+              <Search className="w-4 h-4 text-nordic-muted absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Buscar material (ej. Alicates, Sujeción, Pegamento...)"
+                value={materialSearch}
+                onChange={(e) => setMaterialSearch(e.target.value)}
+                className="w-full bg-nordic-surface border border-nordic-border focus:border-nordic-gold rounded-lg pl-9 pr-8 py-1.5 text-xs text-nordic-text placeholder-nordic-muted/60 focus:outline-none transition-colors"
+              />
+              {materialSearch && (
+                <button
+                  onClick={() => setMaterialSearch('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-nordic-muted hover:text-white"
+                  title="Limpiar búsqueda"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
 
-              return (
-                <div
-                  key={item.materialId}
-                  className={`rounded-xl border p-4 transition-all space-y-3 shadow-sm ${
-                    isDone
-                      ? 'bg-gradient-to-br from-emerald-950/30 via-nordic-surface to-nordic-card border-emerald-700/60'
-                      : 'bg-gradient-to-br from-nordic-surface via-nordic-card to-nordic-surface border-nordic-border hover:border-nordic-gold/50'
+            {/* Selector de Categorías de Materiales */}
+            <div className="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 scrollbar-none text-xs">
+              {[
+                { id: 'all', label: `Todos (${progressResult.breakdown.length})` },
+                { id: 'wood', label: '🪵 Madera' },
+                { id: 'stone', label: '🪨 Piedra' },
+                { id: 'metal', label: '⛏️ Metal' },
+                { id: 'cloth', label: '🧵 Tela/Cuero' },
+                { id: 'rare', label: '✨ Especiales' }
+              ].map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setMaterialCategory(cat.id as any)}
+                  className={`px-2.5 py-1 rounded-lg font-medium whitespace-nowrap transition-colors ${
+                    materialCategory === cat.id
+                      ? 'bg-nordic-gold text-black font-bold shadow-sm'
+                      : 'bg-nordic-surface hover:bg-nordic-border text-nordic-muted hover:text-nordic-text border border-nordic-border'
                   }`}
                 >
-                  {/* Cabecera del material con icono y estado */}
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl p-2 rounded-xl bg-nordic-card/90 border border-nordic-border/60 shadow-sm">
-                        {icon}
-                      </span>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-bold text-nordic-text block">
-                            {name}
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Grid de Materiales Filtrados */}
+          {progressResult.breakdown.filter((item) => {
+            const meta = KNOWN_MATERIALS[item.materialId];
+            const name = meta ? meta.name : (item.materialId === 'influencePoints' ? 'Puntos de Influencia' : item.materialId);
+            if (materialSearch.trim()) {
+              const q = materialSearch.toLowerCase().trim();
+              const matchName = name.toLowerCase().includes(q);
+              const matchSource = meta?.source ? meta.source.toLowerCase().includes(q) : false;
+              if (!matchName && !matchSource) return false;
+            }
+            if (materialCategory !== 'all') {
+              if (!meta) return false;
+              if (materialCategory === 'rare') {
+                if (meta.category !== 'rare' && meta.category !== 'special') return false;
+              } else if (meta.category !== materialCategory) {
+                return false;
+              }
+            }
+            return true;
+          }).length === 0 ? (
+            <div className="p-8 text-center bg-nordic-surface rounded-xl border border-nordic-border text-nordic-muted text-xs">
+              🔍 No se encontraron materiales que coincidan con la búsqueda o categoría seleccionada.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              {progressResult.breakdown
+                .filter((item) => {
+                  const meta = KNOWN_MATERIALS[item.materialId];
+                  const name = meta ? meta.name : (item.materialId === 'influencePoints' ? 'Puntos de Influencia' : item.materialId);
+                  if (materialSearch.trim()) {
+                    const q = materialSearch.toLowerCase().trim();
+                    const matchName = name.toLowerCase().includes(q);
+                    const matchSource = meta?.source ? meta.source.toLowerCase().includes(q) : false;
+                    if (!matchName && !matchSource) return false;
+                  }
+                  if (materialCategory !== 'all') {
+                    if (!meta) return false;
+                    if (materialCategory === 'rare') {
+                      if (meta.category !== 'rare' && meta.category !== 'special') return false;
+                    } else if (meta.category !== materialCategory) {
+                      return false;
+                    }
+                  }
+                  return true;
+                })
+                .map((item) => {
+                  const meta = KNOWN_MATERIALS[item.materialId];
+                  const name = meta ? meta.name : (item.materialId === 'influencePoints' ? 'Puntos de Influencia' : item.materialId);
+                  const icon = meta ? meta.icon : (item.materialId === 'influencePoints' ? '🎖️' : '📦');
+                  const isDone = item.missing === 0;
+                  const stepBig = item.required >= 500 ? 200 : 100;
+
+                  return (
+                    <div
+                      key={item.materialId}
+                      className={`rounded-xl border p-4 transition-all space-y-3 shadow-sm ${
+                        isDone
+                          ? 'bg-gradient-to-br from-emerald-950/30 via-nordic-surface to-nordic-card border-emerald-700/60'
+                          : 'bg-gradient-to-br from-nordic-surface via-nordic-card to-nordic-surface border-nordic-border hover:border-nordic-gold/50'
+                      }`}
+                    >
+                      {/* Cabecera del material con ItemIcon, categoría y lugar de farmeo */}
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-3">
+                          <span className="p-2 rounded-xl bg-nordic-card/90 border border-nordic-border/60 shadow-sm flex items-center justify-center min-w-[44px] min-h-[44px]">
+                            <ItemIcon id={item.materialId} fallbackEmoji={icon} name={name} size="md" />
                           </span>
-                          {meta?.category && (
-                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-nordic-card text-nordic-muted border border-nordic-border uppercase font-mono">
-                              {meta.category}
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-bold text-nordic-text block">
+                                {name}
+                              </span>
+                              {meta?.category && (
+                                <span className="text-[10px] px-1.5 py-0.5 rounded bg-nordic-card text-nordic-muted border border-nordic-border uppercase font-mono">
+                                  {meta.category}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-xs text-nordic-muted">
+                              Pide: <strong className="text-nordic-gold font-mono font-bold">{item.required.toLocaleString()}</strong> un.
+                            </span>
+                            {meta?.source && (
+                              <div className="text-[11px] text-nordic-muted/80 flex items-center gap-1 mt-0.5" title="Dónde conseguir este recurso">
+                                <MapPin className="w-3 h-3 text-nordic-gold/70 flex-shrink-0" />
+                                <span className="truncate max-w-[200px] sm:max-w-[280px]">{meta.source}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="text-right flex flex-col items-end">
+                          {isDone ? (
+                            <span className="px-2.5 py-0.5 rounded-full bg-emerald-900/60 text-emerald-300 font-bold text-xs border border-emerald-600/70 flex items-center gap-1 shadow-sm">
+                              <Check className="w-3.5 h-3.5 text-emerald-400" /> ¡Completo!
+                            </span>
+                          ) : (
+                            <span className="text-xs font-mono font-bold text-rose-400">
+                              Faltan -{item.missing.toLocaleString()}
                             </span>
                           )}
+                          <span className="text-[11px] font-mono font-bold text-nordic-gold mt-0.5">
+                            {item.percent}%
+                          </span>
                         </div>
-                        <span className="text-xs text-nordic-muted">
-                          Pide: <strong className="text-nordic-gold font-mono font-bold">{item.required.toLocaleString()}</strong> un.
-                        </span>
                       </div>
-                    </div>
-
-                    <div className="text-right flex flex-col items-end">
-                      {isDone ? (
-                        <span className="px-2.5 py-0.5 rounded-full bg-emerald-900/60 text-emerald-300 font-bold text-xs border border-emerald-600/70 flex items-center gap-1 shadow-sm">
-                          <Check className="w-3.5 h-3.5 text-emerald-400" /> ¡Completo!
-                        </span>
-                      ) : (
-                        <span className="text-xs font-mono font-bold text-rose-400">
-                          Faltan -{item.missing.toLocaleString()}
-                        </span>
-                      )}
-                      <span className="text-[11px] font-mono font-bold text-nordic-gold mt-0.5">
-                        {item.percent}%
-                      </span>
-                    </div>
-                  </div>
 
                   {/* Barra de progreso visual */}
                   <div className="w-full bg-nordic-card/90 rounded-full h-2 overflow-hidden border border-nordic-border/60">
@@ -1177,8 +1344,9 @@ export const DistrictCalculator: React.FC = () => {
               );
             })}
           </div>
-        </div>
-      )}
+        )}
+      </div>
+    )}
 
       {/* ========================================================================= */}
       {/* SUBTAB 2: INVENTARIO EN COFRES                                             */}

@@ -10,9 +10,10 @@ import {
   Zap,
   Users,
   AlertCircle,
-  CheckCircle2,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Check,
+  RotateCcw
 } from 'lucide-react';
 
 const guidesData = guidesDataRaw.guides as GuideSection[];
@@ -22,6 +23,51 @@ export const GuidesHub: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'sanctum' | 'tombs' | 'events' | 'classes' | 'pvp' | 'district'>('sanctum');
   const [selectedSubclass, setSelectedSubclass] = useState<SubclassData | null>(null);
   const [expandedGuideId, setExpandedGuideId] = useState<string>('sanctum-normal');
+
+  // Persistent interactive checklist state
+  const [checkedItems, setCheckedItems] = useState<Record<string, number[]>>(() => {
+    try {
+      const saved = localStorage.getItem('frostborn_checklist_state');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
+
+  const toggleChecklistItem = (guideId: string, itemIdx: number) => {
+    setCheckedItems(prev => {
+      const current = prev[guideId] || [];
+      const updated = current.includes(itemIdx)
+        ? current.filter(i => i !== itemIdx)
+        : [...current, itemIdx];
+      const newState = { ...prev, [guideId]: updated };
+      try {
+        localStorage.setItem('frostborn_checklist_state', JSON.stringify(newState));
+      } catch {}
+      return newState;
+    });
+  };
+
+  const resetChecklist = (guideId: string) => {
+    setCheckedItems(prev => {
+      const newState = { ...prev, [guideId]: [] };
+      try {
+        localStorage.setItem('frostborn_checklist_state', JSON.stringify(newState));
+      } catch {}
+      return newState;
+    });
+  };
+
+  const markAllReady = (guideId: string, totalCount: number) => {
+    setCheckedItems(prev => {
+      const all = Array.from({ length: totalCount }, (_, i) => i);
+      const newState = { ...prev, [guideId]: all };
+      try {
+        localStorage.setItem('frostborn_checklist_state', JSON.stringify(newState));
+      } catch {}
+      return newState;
+    });
+  };
 
   // Filter guides by active category
   const filteredGuides = guidesData.filter(g => {
@@ -212,23 +258,93 @@ export const GuidesHub: React.FC = () => {
                       </ul>
                     </div>
 
-                    {/* Checklist de Preparación */}
-                    <div>
-                      <span className="text-xs font-semibold uppercase text-nordic-muted tracking-wider block mb-2">
-                        🎒 Equipo & Consumibles Recomendados
-                      </span>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {guide.preparationChecklist.map((item, i) => (
-                          <div
-                            key={i}
-                            className="bg-nordic-card/40 border border-nordic-border rounded-lg p-2.5 text-xs text-nordic-text flex items-start gap-2"
-                          >
-                            <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
+                    {/* Checklist de Preparación Interactivo */}
+                    {guide.preparationChecklist && guide.preparationChecklist.length > 0 && (() => {
+                      const checkedList = checkedItems[guide.id] || [];
+                      const isAllChecked = checkedList.length === guide.preparationChecklist.length;
+                      const pct = Math.round((checkedList.length / guide.preparationChecklist.length) * 100);
+
+                      return (
+                        <div className="space-y-2.5">
+                          <div className="flex items-center justify-between gap-2 flex-wrap">
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs font-semibold uppercase text-nordic-muted tracking-wider">
+                                🎒 Equipo & Consumibles Recomendados
+                              </span>
+                              <span className={`text-[11px] font-mono px-2 py-0.5 rounded-full font-bold transition-colors ${
+                                isAllChecked
+                                  ? 'bg-emerald-950/70 border border-emerald-500/50 text-emerald-400'
+                                  : 'bg-nordic-card border border-nordic-border text-nordic-gold'
+                              }`}>
+                                {checkedList.length} / {guide.preparationChecklist.length} listos ({pct}%)
+                              </span>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                              <button
+                                type="button"
+                                onClick={() => markAllReady(guide.id, guide.preparationChecklist.length)}
+                                className="text-[11px] text-nordic-muted hover:text-nordic-gold transition-colors font-medium"
+                              >
+                                Marcar todos
+                              </button>
+                              {checkedList.length > 0 && (
+                                <>
+                                  <span className="text-nordic-muted text-xs">•</span>
+                                  <button
+                                    type="button"
+                                    onClick={() => resetChecklist(guide.id)}
+                                    className="text-[11px] text-nordic-muted hover:text-rose-400 transition-colors font-medium flex items-center gap-1"
+                                  >
+                                    <RotateCcw className="w-3 h-3" />
+                                    <span>Reiniciar</span>
+                                  </button>
+                                </>
+                              )}
+                            </div>
                           </div>
-                        ))}
-                      </div>
-                    </div>
+
+                          {/* Barra de Progreso */}
+                          <div className="w-full bg-nordic-card rounded-full h-1.5 overflow-hidden border border-nordic-border/50">
+                            <div
+                              className={`h-full transition-all duration-300 rounded-full ${
+                                isAllChecked ? 'bg-emerald-400 shadow-sm shadow-emerald-500/50' : 'bg-nordic-gold'
+                              }`}
+                              style={{ width: `${pct}%` }}
+                            />
+                          </div>
+
+                          {/* Lista de Ítems Interactivos */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {guide.preparationChecklist.map((item, i) => {
+                              const isChecked = checkedList.includes(i);
+                              return (
+                                <div
+                                  key={i}
+                                  onClick={() => toggleChecklistItem(guide.id, i)}
+                                  className={`p-2.5 rounded-lg text-xs flex items-start gap-2.5 cursor-pointer transition-all border select-none ${
+                                    isChecked
+                                      ? 'bg-emerald-950/25 border-emerald-500/40 text-emerald-300/80 shadow-sm'
+                                      : 'bg-nordic-card/40 border-nordic-border text-nordic-text hover:border-nordic-gold/40 hover:bg-nordic-card/70'
+                                  }`}
+                                >
+                                  <div className={`w-4 h-4 rounded mt-0.5 flex items-center justify-center flex-shrink-0 transition-colors ${
+                                    isChecked
+                                      ? 'bg-emerald-500 text-black shadow-sm'
+                                      : 'border border-nordic-border/80 bg-nordic-surface'
+                                  }`}>
+                                    {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
+                                  </div>
+                                  <span className={isChecked ? 'line-through opacity-75' : ''}>
+                                    {item}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })()}
 
                     {/* Mecánicas Clave */}
                     <div>

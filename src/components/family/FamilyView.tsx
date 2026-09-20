@@ -8,6 +8,8 @@ import {
   Check,
   Edit2
 } from 'lucide-react';
+import { WallCostCalculator } from './WallCostCalculator';
+import { RaidCalculator } from './RaidCalculator';
 
 export const FamilyView: React.FC = () => {
   const {
@@ -23,7 +25,7 @@ export const FamilyView: React.FC = () => {
     clearShield
   } = useFamilyStore();
 
-  const [activeTab, setActiveTab] = useState<'layouts' | 'roles' | 'chests' | 'shield'>('layouts');
+  const [activeTab, setActiveTab] = useState<'layouts' | 'walls' | 'raids' | 'roles' | 'chests' | 'shield'>('layouts');
   const [editingName, setEditingName] = useState(false);
   const [tempName, setTempName] = useState(familyName);
   const [timeLeftStr, setTimeLeftStr] = useState<string>('');
@@ -145,7 +147,31 @@ export const FamilyView: React.FC = () => {
           }`}
         >
           <span>🏰</span>
-          <span>Plantillas & Materiales</span>
+          <span>Plantillas de Base</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('walls')}
+          className={`py-2.5 px-4 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
+            activeTab === 'walls'
+              ? 'bg-nordic-gold text-black font-bold shadow-md'
+              : 'text-nordic-muted hover:text-nordic-text hover:bg-nordic-card'
+          }`}
+        >
+          <span>🧱</span>
+          <span>Coste de Paredes</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('raids')}
+          className={`py-2.5 px-4 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
+            activeTab === 'raids'
+              ? 'bg-nordic-gold text-black font-bold shadow-md'
+              : 'text-nordic-muted hover:text-nordic-text hover:bg-nordic-card'
+          }`}
+        >
+          <span>💣</span>
+          <span>Asedios (Raid)</span>
         </button>
 
         <button
@@ -407,6 +433,16 @@ export const FamilyView: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* ========================================================================= */}
+      {/* SUBTAB: CALCULADORA DE COSTE DE PAREDES                                  */}
+      {/* ========================================================================= */}
+      {activeTab === 'walls' && <WallCostCalculator />}
+
+      {/* ========================================================================= */}
+      {/* SUBTAB: CALCULADORA DE ASESIOS (RAIDS)                                    */}
+      {/* ========================================================================= */}
+      {activeTab === 'raids' && <RaidCalculator />}
 
       {/* ========================================================================= */}
       {/* SUBTAB 2: INTEGRANTES & ROLES DE FAMILIA                                  */}
