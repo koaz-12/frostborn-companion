@@ -145,8 +145,7 @@ export function calculateInventoryProgress(
     });
   }
 
-  // Ordenar: primero los que más faltan
-  breakdown.sort((a, b) => a.percent - b.percent);
+  // Mantenemos el orden estable de los materiales para que las tarjetas no se muevan al escribir
 
   const overallPercent = totalRequiredUnits > 0
     ? Math.min(100, Math.round((totalOwnedCappedUnits / totalRequiredUnits) * 100))

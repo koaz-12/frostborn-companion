@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useInventoryStore } from '../../stores/useInventoryStore';
 import { calculateDistrictCost, calculateInventoryProgress } from '../../lib/calculations';
 import districtsDataRaw from '../../data/districts.json';
@@ -45,6 +45,43 @@ export const DistrictCalculator: React.FC = () => {
   const inspectorRef = useRef<HTMLDivElement>(null);
 
   const maxAvailableLevel = 184;
+
+  // Estados locales en formato texto para permitir borrar el número sin bloqueos
+  const [currentInputStr, setCurrentInputStr] = useState<string>(String(districtCurrentLevel));
+  const [targetInputStr, setTargetInputStr] = useState<string>(String(districtTargetLevel));
+
+  // Sincronizar inputs si el estado de Zustand cambia externamente
+  useEffect(() => {
+    setCurrentInputStr(String(districtCurrentLevel));
+  }, [districtCurrentLevel]);
+
+  useEffect(() => {
+    setTargetInputStr(String(districtTargetLevel));
+  }, [districtTargetLevel]);
+
+  // Debounce suave (450ms) para nivel actual
+  useEffect(() => {
+    if (currentInputStr === '') return;
+    const timer = setTimeout(() => {
+      const val = parseInt(currentInputStr, 10);
+      if (!isNaN(val) && val >= 1 && val < maxAvailableLevel) {
+        handleCurrentChange(val);
+      }
+    }, 450);
+    return () => clearTimeout(timer);
+  }, [currentInputStr]);
+
+  // Debounce suave (450ms) para nivel objetivo
+  useEffect(() => {
+    if (targetInputStr === '') return;
+    const timer = setTimeout(() => {
+      const val = parseInt(targetInputStr, 10);
+      if (!isNaN(val) && val > districtCurrentLevel && val <= maxAvailableLevel) {
+        handleTargetChange(val);
+      }
+    }, 450);
+    return () => clearTimeout(timer);
+  }, [targetInputStr, districtCurrentLevel]);
 
   // Calculate costs taking into account skipped/ticketed levels
   const costResult = calculateDistrictCost(
@@ -208,10 +245,27 @@ export const DistrictCalculator: React.FC = () => {
               type="number"
               min="1"
               max="183"
-              value={districtCurrentLevel}
-              onChange={(e) => handleCurrentChange(Number(e.target.value))}
+              value={currentInputStr}
+              placeholder="1"
+              onFocus={(e) => e.target.select()}
+              onChange={(e) => setCurrentInputStr(e.target.value)}
+              onBlur={() => {
+                const val = parseInt(currentInputStr, 10);
+                if (isNaN(val) || val < 1) {
+                  setCurrentInputStr(String(districtCurrentLevel));
+                } else {
+                  handleCurrentChange(val);
+                }
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  const val = parseInt(currentInputStr, 10);
+                  if (!isNaN(val)) handleCurrentChange(val);
+                  (e.target as HTMLInputElement).blur();
+                }
+              }}
               aria-label="Nivel actual del distrito"
-              className="w-24 bg-nordic-card border border-nordic-gold/40 rounded-xl px-3 py-2.5 font-runic font-bold text-2xl text-nordic-gold text-center focus:outline-none focus:border-nordic-gold"
+              className="w-24 bg-nordic-card border border-nordic-gold/40 rounded-xl px-3 py-2.5 font-runic font-bold text-2xl text-nordic-gold text-center focus:outline-none focus:border-nordic-gold transition-colors"
             />
             <div className="flex-1 flex gap-1.5">
               <button
@@ -263,10 +317,27 @@ export const DistrictCalculator: React.FC = () => {
               type="number"
               min={districtCurrentLevel + 1}
               max="184"
-              value={districtTargetLevel}
-              onChange={(e) => handleTargetChange(Number(e.target.value))}
+              value={targetInputStr}
+              placeholder={String(districtCurrentLevel + 1)}
+              onFocus={(e) => e.target.select()}
+              onChange={(e) => setTargetInputStr(e.target.value)}
+              onBlur={() => {
+                const val = parseInt(targetInputStr, 10);
+                if (isNaN(val) || val <= districtCurrentLevel) {
+                  setTargetInputStr(String(districtTargetLevel));
+                } else {
+                  handleTargetChange(val);
+                }
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  const val = parseInt(targetInputStr, 10);
+                  if (!isNaN(val)) handleTargetChange(val);
+                  (e.target as HTMLInputElement).blur();
+                }
+              }}
               aria-label="Nivel objetivo a alcanzar"
-              className="w-24 bg-nordic-card border border-nordic-gold rounded-xl px-3 py-2.5 font-runic font-bold text-2xl text-nordic-gold-light text-center focus:outline-none focus:border-nordic-gold"
+              className="w-24 bg-nordic-card border border-nordic-gold rounded-xl px-3 py-2.5 font-runic font-bold text-2xl text-nordic-gold-light text-center focus:outline-none focus:border-nordic-gold transition-colors"
             />
             <div className="flex-1 flex gap-1.5">
               <button
@@ -493,9 +564,10 @@ export const DistrictCalculator: React.FC = () => {
                   min="1"
                   max="184"
                   value={inspectedLevel}
+                  onFocus={(e) => e.target.select()}
                   onChange={(e) => setInspectedLevel(Math.max(1, Math.min(184, Number(e.target.value))))}
                   aria-label="Inspeccionar nivel específico"
-                  className="w-20 bg-nordic-card border border-nordic-gold rounded-lg px-2.5 py-1 text-sm font-bold font-mono text-nordic-gold text-center focus:outline-none"
+                  className="w-20 bg-nordic-card border border-nordic-gold rounded-lg px-2.5 py-1 text-sm font-bold font-mono text-nordic-gold text-center focus:outline-none transition-colors"
                 />
                 <button
                   onClick={() => setInspectedLevel(districtCurrentLevel + 1)}
@@ -630,11 +702,12 @@ export const DistrictCalculator: React.FC = () => {
                             min="0"
                             value={owned === 0 ? '' : owned}
                             placeholder="0"
+                            onFocus={(e) => e.target.select()}
                             onChange={(e) => {
                               const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
                               setMaterialCount(mId, val);
                             }}
-                            className="w-16 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none"
+                            className="w-16 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none transition-colors"
                             aria-label={`Existencias de ${name}`}
                           />
                         </div>
@@ -733,11 +806,12 @@ export const DistrictCalculator: React.FC = () => {
                           min="0"
                           value={(inventory['influencePoints'] || 0) === 0 ? '' : inventory['influencePoints']}
                           placeholder="0"
+                          onFocus={(e) => e.target.select()}
                           onChange={(e) => {
                             const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
                             setMaterialCount('influencePoints', val);
                           }}
-                          className="w-20 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none"
+                          className="w-20 bg-nordic-card border border-nordic-border focus:border-nordic-gold rounded px-1.5 py-0.5 text-xs font-mono font-bold text-nordic-text text-center focus:outline-none transition-colors"
                           aria-label="Puntos de influencia"
                         />
                       </div>
@@ -1045,12 +1119,13 @@ export const DistrictCalculator: React.FC = () => {
                         min="0"
                         value={item.owned === 0 ? '' : item.owned}
                         placeholder="0"
+                        onFocus={(e) => e.target.select()}
                         onChange={(e) => {
                           const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
                           setMaterialCount(item.materialId, val);
                         }}
                         aria-label={`Cantidad que tengo de ${name}`}
-                        className="w-24 bg-nordic-surface border border-nordic-border focus:border-nordic-gold rounded-lg px-2.5 py-1 text-sm font-mono font-bold text-nordic-text text-center focus:outline-none transition-colors"
+                        className="w-24 bg-nordic-surface border border-nordic-border focus:border-nordic-gold rounded-lg px-2.5 py-1 text-sm font-mono font-bold text-nordic-text text-center focus:outline-none transition-colors placeholder-nordic-muted/40"
                       />
                     </div>
 
@@ -1155,10 +1230,15 @@ export const DistrictCalculator: React.FC = () => {
                     <input
                       type="number"
                       min="0"
-                      value={owned}
-                      onChange={(e) => setMaterialCount(matId, Number(e.target.value))}
+                      value={owned === 0 ? '' : owned}
+                      placeholder="0"
+                      onFocus={(e) => e.target.select()}
+                      onChange={(e) => {
+                        const val = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
+                        setMaterialCount(matId, val);
+                      }}
                       aria-label={`Cantidad de ${name}`}
-                      className="w-full bg-nordic-card border border-nordic-border rounded-lg px-2.5 py-1.5 text-sm font-mono text-nordic-text focus:outline-none focus:border-nordic-gold"
+                      className="w-full bg-nordic-card border border-nordic-border rounded-lg px-2.5 py-1.5 text-sm font-mono text-nordic-text focus:outline-none focus:border-nordic-gold placeholder-nordic-muted/40 transition-colors"
                     />
                     <button
                       onClick={() => setMaterialCount(matId, owned + 50)}
